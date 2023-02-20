@@ -1,6 +1,6 @@
 
 <h2><div *ngIf="tabIndex < 2">Referenceファイル選択</div><div *ngIf="tabIndex === 2">Genome ファイル選択</div></h2>
-<mat-tab-group selectedIndex="0" (selectedTabChange)="changeTab($event)">
+<mat-tab-group selectedIndex="0" (selectedTabChange)="changeTab($any($event))">
   <mat-tab>
     <ng-template mat-tab-label>
       <span>標準ゲノム:保存済みカスタムゲノム</span>

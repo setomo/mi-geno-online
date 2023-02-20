@@ -1,46 +1,52 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Rjob } from '../rjob';
-import { JobDetail} from "../Rjobs/jobDetail";
+import { JobDetail } from '../rjobs/jobDetail';
 import { RjobService } from '../rjob.service';
-import {FileUploadService} from "../services/file-upload.service";
-import {HttpEventType, HttpResponse} from "@angular/common/http";
-import {Observable} from "rxjs";
+import { FileUploadService } from '../services/file-upload.service';
+import { HttpEventType, HttpResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
 // @ts-ignore
-import { v4 as uuid } from "uuid";
+import { v4 as uuid } from 'uuid';
 import { isNumeric } from 'rxjs/internal-compatibility/index';
 import { ProcessDialogComponent } from '../process-dialog/process-dialog.component';
-import {MatDialog} from "@angular/material/dialog";
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: [ './dashboard.component.css' ]
+  styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  @ViewChild('fileDropRef', { static: false }) fileDropEl: ElementRef | undefined;
+  @ViewChild('fileDropRef', { static: false }) fileDropEl:
+    | ElementRef
+    | undefined;
   files: any[] = [];
   files_1: any[] = [];
   files_2: any[] = [];
   message: string[] = [];
   item: any;
-  genoFile: any = {genoFile: ""};
+  genoFile: any = { genoFile: '' };
   selectedFiles?: FileList;
   fileInfos?: Observable<any>;
   myId: any;
   rjobs: Rjob[] = [];
   // rjob: Rjob = {};
-  rjob ={} as Rjob;
+  rjob = {} as Rjob;
   job: any;
-  jsonData ={} as JobDetail;
+  jsonData = {} as JobDetail;
 
-  constructor(private rjobService: RjobService, private uploadService: FileUploadService,private dialog: MatDialog) { }
+  constructor(
+    private rjobService: RjobService,
+    private uploadService: FileUploadService,
+    private dialog: MatDialog
+  ) {}
 
   ngOnInit() {
     // this.getRjobs();
     this.fileInfos = this.uploadService.getFiles();
     this.myId = uuid();
     this.genoFile = {
-      trainingGenoType: "vcf"
+      trainingGenoType: 'vcf',
     };
     this.jsonData.Kcv = 2;
     this.jsonData.Cyclescv = 20;
@@ -53,27 +59,26 @@ export class DashboardComponent implements OnInit {
     this.rjob.fileGroupId = this.myId;
     this.rjob.jsonData = JSON.stringify(this.jsonData);
     this.rjob.state = 0;
-    let today =  new Date();
+    let today = new Date();
     this.rjob.createdDate = today.toISOString();
-    this.rjob.hostId = "";
-    this.rjob.uid = "";
-    this.rjob.completedDate="";
-    this.rjob.id=0;
-    this.rjob.errorMessage="";
-    this.rjob.completedDate="";
+    this.rjob.hostId = '';
+    this.rjob.uid = '';
+    this.rjob.completedDate = '';
+    this.rjob.id = 0;
+    this.rjob.errorMessage = '';
+    this.rjob.completedDate = '';
     this.rjob.succeeded = false;
     this.rjob.completed = false;
 
-
-    console.log("onInit");
+    console.log('onInit');
     console.log(this.myId);
   }
 
   getRjobs(): void {
-    this.rjobService.getRjobs()
-      .subscribe(rjobs => this.rjobs = rjobs.slice(1, 5));
+    this.rjobService
+      .getRjobs()
+      .subscribe((rjobs) => (this.rjobs = rjobs.slice(1, 5)));
   }
-
 
   /**
    * on file drop handler
@@ -105,17 +110,17 @@ export class DashboardComponent implements OnInit {
       return;
     }
 
-    switch (idx){
+    switch (idx) {
       case 1: {
-        console.log("before delete 1:"+this.files_1.length);
+        console.log('before delete 1:' + this.files_1.length);
         this.files_1.splice(index, 1);
-        console.log("after delete 1:"+this.files_1.length);
+        console.log('after delete 1:' + this.files_1.length);
         break;
       }
       case 2: {
-        console.log("before delete 2:" + this.files_2.length);
+        console.log('before delete 2:' + this.files_2.length);
         this.files_2.splice(index, 1);
-        console.log("after delete 2:" + this.files_2.length);
+        console.log('after delete 2:' + this.files_2.length);
         break;
       }
     }
@@ -130,16 +135,13 @@ export class DashboardComponent implements OnInit {
     //   console.log("after delete:"+this.files_2.length);
     // }
     this.files = [];
-    if(this.files_1.length > 0) {
+    if (this.files_1.length > 0) {
       this.files.push(this.files_1);
     }
-    if(this.files_2.length > 0) {
+    if (this.files_2.length > 0) {
       this.files.push(this.files_2);
     }
-
   }
-
-
 
   /**
    * Convert Files list to normal array list
@@ -152,7 +154,7 @@ export class DashboardComponent implements OnInit {
       item.progress = 0;
       item.fileType = fileType;
       this.files.push(item);
-      switch (idx){
+      switch (idx) {
         case 1: {
           item.trainingGenoType = this.genoFile.trainingGenoType;
           this.files_1.push(item);
@@ -168,7 +170,7 @@ export class DashboardComponent implements OnInit {
     //this.uploadFilesSimulator(0);
   }
 
-  readyToUpload(){
+  readyToUpload() {
     return this.files_1.length > 0 && this.files_2.length > 0;
   }
 
@@ -180,7 +182,7 @@ export class DashboardComponent implements OnInit {
   prepareFilesList(idx: number, fileType: string) {
     console.log('prepareFilesList invoked. idx=' + idx);
 
-    if ( this.selectedFiles !== undefined) {
+    if (this.selectedFiles !== undefined) {
       console.log('dropped file found.');
 
       // @ts-ignore
@@ -191,17 +193,16 @@ export class DashboardComponent implements OnInit {
         this.item.fileType = fileType;
         this.item.trainingGenoType = this.genoFile.trainingGenoType;
         this.files.push(this.selectedFiles.item(i));
-        switch (idx){
+        switch (idx) {
           case 1: {
             this.files_1.push(this.selectedFiles.item(i));
             break;
           }
           case 2: {
-            this.item.trainingGenoType = "";
+            this.item.trainingGenoType = '';
             this.files_2.push(this.selectedFiles.item(i));
           }
         }
-
       }
       // @ts-ignore
       // this.fileDropEl.nativeElement.value = '';
@@ -231,29 +232,38 @@ export class DashboardComponent implements OnInit {
       console.log('call uploadService.');
       console.log(this.myId);
 
-      this.uploadService.upload(file,this.myId, this.files[idx].fileType, this.files[idx].trainingGenoType).subscribe(
-        (event: any) => {
-          if (event.type === HttpEventType.UploadProgress) {
-            this.files[idx].progress = Math.round(100 * event.loaded / event.total);
-            // this.progressInfos[idx].value = Math.round(100 * event.loaded / event.total);
-          } else if (event instanceof HttpResponse) {
-            const msg = 'Uploaded the file successfully: ' + file.name;
+      this.uploadService
+        .upload(
+          file,
+          this.myId,
+          this.files[idx].fileType,
+          this.files[idx].trainingGenoType
+        )
+        .subscribe(
+          (event: any) => {
+            if (event.type === HttpEventType.UploadProgress) {
+              this.files[idx].progress = Math.round(
+                (100 * event.loaded) / event.total
+              );
+              // this.progressInfos[idx].value = Math.round(100 * event.loaded / event.total);
+            } else if (event instanceof HttpResponse) {
+              const msg = 'Uploaded the file successfully: ' + file.name;
+              this.message.push(msg);
+              this.fileInfos = this.uploadService.getFiles();
+              // register
+              this.registerJob();
+            }
+          },
+          (err: any) => {
+            this.files[idx].progress = 0;
+            const msg = 'Could not upload the file: ' + file.name;
             this.message.push(msg);
+            console.log(err);
             this.fileInfos = this.uploadService.getFiles();
-            // register
-            this.registerJob();
           }
-        },
-        (err: any) => {
-          this.files[idx].progress = 0;
-          const msg = 'Could not upload the file: ' + file.name;
-          this.message.push(msg);
-          console.log(err);
-          this.fileInfos = this.uploadService.getFiles();
-        });
+        );
     }
   }
-
 
   uploadFiles(): void {
     console.log('uploadFiles invoked.');
@@ -269,7 +279,7 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  registerJob(): void{
+  registerJob(): void {
     console.log('registerJob invoked.');
     this.message = [];
     console.log(this.jsonData);
@@ -278,26 +288,27 @@ export class DashboardComponent implements OnInit {
     console.log(this.rjob);
     this.rjobService.getRjobByUuid(this.rjob.uuid).subscribe(
       (job: any) => {
-        if(!isNumeric(job.uid)){
+        if (!isNumeric(job.uid)) {
           this.rjobService.addRjob(this.rjob).subscribe(
             (event: any) => {
               let count = 0;
               for (let i = 0; i < this.files.length; i++) {
-                  if (this.files[i].progress ==100){
-                    count++;
-                  }
+                if (this.files[i].progress == 100) {
+                  count++;
+                }
               }
-              if(this.files.length == count) {
+              if (this.files.length == count) {
                 this.openProcessDialog();
               }
-              console.log("registering job completed")
+              console.log('registering job completed');
             },
             (err: any) => {
               const msg = 'Could not add new job ';
               this.openErrorDialog();
               this.message.push(msg);
               console.log(err);
-            });
+            }
+          );
         }
       },
       (err: any) => {
@@ -305,25 +316,26 @@ export class DashboardComponent implements OnInit {
         this.openErrorDialog();
         this.message.push(msg);
         console.log(err);
-      });
-
-
+      }
+    );
   }
 
   openProcessDialog() {
-    const dialogRef = this.dialog.open(ProcessDialogComponent,{
-      data:{
-        message: '新規Jobが登録されました。履歴ボタンを押し、Jobの実行結果の確認を行ってください。',
-        cancelButtonText:'Done'
+    const dialogRef = this.dialog.open(ProcessDialogComponent, {
+      data: {
+        message:
+          '新規Jobが登録されました。履歴ボタンを押し、Jobの実行結果の確認を行ってください。',
+        cancelButtonText: 'Done',
       },
     });
   }
 
   openErrorDialog() {
-    const dialogRef = this.dialog.open(ProcessDialogComponent,{
-      data:{
-        message: '新規Jobの登録ができませんでした。 ディスクの空き容量を確認し再度登録を行ってください。',
-        cancelButtonText:'Close'
+    const dialogRef = this.dialog.open(ProcessDialogComponent, {
+      data: {
+        message:
+          '新規Jobの登録ができませんでした。 ディスクの空き容量を確認し再度登録を行ってください。',
+        cancelButtonText: 'Close',
       },
     });
   }

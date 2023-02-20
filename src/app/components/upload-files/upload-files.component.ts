@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FileUploadService } from 'src/app/services/file-upload.service';
+import { FileUploadService } from '../../services/file-upload.service';
 // @ts-ignore
 import { v4 as uuid } from "uuid";
 

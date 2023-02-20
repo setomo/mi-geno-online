@@ -42,7 +42,7 @@
       <td>
         <mat-nav-list class="country-list" style="text-align: start;">
           <a mat-list-item *ngFor="let ref of result" (click)="selectReference(ref)">
-            <mat-radio-button color="primary" [checked]="false" [value]="1" (change)="selection = $event.value">
+            <mat-radio-button color="primary" [checked]="false" [value]="1" (change)="selection = $any($event.target.value)">
               {{ ref['species_name'] }}
             </mat-radio-button>
           </a>
