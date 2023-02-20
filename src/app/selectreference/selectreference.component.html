@@ -1,0 +1,23 @@
+
+    <p class="card-text">
+   リファレンスゲノムを選択してください
+  </p>
+
+  <ng-select [items]="reference$ | async"
+             bindLabel="refName"
+             autofocus
+             bindValue="genome_assembly_id"
+             (change)="onChange($event)"
+             [(ngModel)]="selectedGenomeInfo">
+  </ng-select>
+    <button style="font-size: 13px;
+    vertical-align: middle;
+    letter-spacing: .03rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;"
+            class="btn btn-success btn-sm"
+            [disabled]="disabled"
+            (click)="downloadRefFile()"
+    >
+      ダウンロード
+    </button>

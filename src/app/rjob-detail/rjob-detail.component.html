@@ -1,0 +1,92 @@
+<div *ngIf="rjob">
+  <h2>Details</h2>
+  <div><span>id: </span>{{rjob.id}}</div>
+  <div>
+    <label>Rjob Info: </label>
+    <div class="_detailpanel">
+      <table >
+        <tr>
+          <th><h3>出力ファイル</h3></th>
+          <th>
+            <div class="mat-app-background basic-container">
+              <tree-filelist [rjob]="rjob" >loading</tree-filelist>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th><h3>ファイル</h3></th>
+          <th>
+            <div class='estimate'>
+              <ul type='disc'>
+                <li>
+                  <h5>遺伝子型データ</h5>
+                  <span></span><input type='text' [(ngModel)]="genoFile" disabled>
+                </li>
+                <li>
+                  <h5>表現型データ</h5>
+                  <span></span><input type='text' [(ngModel)]="phenoFile" disabled>
+                </li>
+              </ul>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th><p class="_required">必須</p><h3>GSモデリングの手法を選択してください<br>(複数選択可)</h3></th>
+          <th>
+            <div class='method'>
+              <label><input type='checkbox' name='Gswitch'  [(ngModel)]="detailData.GBLUP_RR">GBLUP-RR</label><br>
+              <label><input type='checkbox' name='Bswitch'  [(ngModel)]="detailData.Bayesian_Lasso" >Bayesian Lasso</label><br>
+              <label><input type='checkbox' name='Rswitch'  [(ngModel)]="detailData.Random_Forest" >Random Forest</label>
+            </div>
+            <div class='BLoption'>
+              <h5>Bayesian Lassoのオプション</h5>
+              <ul type='disc'>
+                <li><span>Iteration=</span><input type='number' [(ngModel)]="detailData.nIter" name='nIter' max='100000' min='1000' value='15000'></li>
+                <li><span>Burn in=</span><input type='number' [(ngModel)]="detailData.burnIn" name='burnIn' max='10000' min='1000' value='5000'></li>
+              </ul>
+            </div>
+            <div class='RFoption'>
+              <h5>Random Forestのオプション</h5>
+              <ul type='disc'>
+                <li><span>N. tree=</span><input type='number' [(ngModel)]="detailData.ntree" name='ntree' max='1000' min='100' value='500'></li>
+              </ul>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th><h3>GSモデルの評価方法</h3></th>
+          <th>
+            <div class='estimate'>
+              <ul type='disc'>
+                <li>
+                  <h5>交差検証の分割数を指定してください</h5>
+                  <span>k=</span><input type='number' [(ngModel)]="detailData.Kcv" name='Kcv' max='10' min='1' required value='2'>
+                  <p class="_annotation">交差検証の分割数がサンプル数を超える場合はエラーとなります。</p>
+                </li>
+                <li>
+                  <h5>交差検証のサイクル数を指定してください</h5>
+                  <span>n=</span><input type='number' [(ngModel)]="detailData.Cyclescv" name='Cyclescv' max='10' min='1' required value='2'>
+                  <p class="_annotation">交差検証の分割数がサンプル数と同じ場合は1個抜き交差検証となるので、このフィールドの数値に関わらずサイクル数は1となります。</p>
+                </li>
+              </ul>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th><h3>乱数の初期シード値の設定</h3></th>
+          <th>
+            <div class='RandomSeed'>
+              <ul type='disc'>
+                <li><span>Random seed number=</span><input type='number' [(ngModel)]="detailData.randomSeedNumber" name='randomSeedNumber' max='65535' min='1' value='1'></li>
+              </ul>
+            </div>
+          </th>
+        </tr>
+      </table>
+  </div>
+  </div>
+  <button (click)="goBack()">戻る</button>
+  <button (click)="save()">更新</button>
+  <button (click)="getResult()">結果ファイル　ダウンロード</button>
+  <button (click)="getError()">エラー出力　ダウンロード</button>
+</div>

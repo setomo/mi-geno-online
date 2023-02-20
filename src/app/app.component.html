@@ -1,0 +1,54 @@
+
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ HEADER ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<header id="header">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+
+  <title>Mi GENO</title>
+
+  <link rel="canonical" href="https://mi-geno.kappuku.jp/01_top.html">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+
+  <link rel="stylesheet" href="/assets/css/initialize.css">
+  <link rel="stylesheet" href="/assets/css/common.min.css">
+
+  <script src="/assets/js/top.js.download"></script>
+  <img class="_logo" src="/assets/img/logo.svg" alt="Mi GENO">
+  <div id="tr">
+    <a class="_howto _c-howto" href="https://plantgarden.jp/ja/help" target="_blank">
+      <img class="_icon" src="/assets/img/howto.svg" alt="?">
+      <span>使い方</span>
+      <img class="_triangle" src="/assets/img/triangle.svg" alt="▶︎">
+    </a>
+    <div class="_c-language">
+      <div class="_on"><p>JA</p></div>
+      <div><p>EN</p></div>
+    </div>
+  </div>
+</header>
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ HEADER ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ CONTENTS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<h1>{{title}}</h1>
+<nav *ngIf="!isHomeRoute()">
+  <a routerLink="/landingpage">Home</a>
+  <a routerLink="/registration"  routerLinkActive="active">Data Registration</a>
+  <a routerLink="/registeredfiles"  routerLinkActive="active">Data View and Export</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ CONTENTS ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑> -->
+
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<div id="footer">
+    <a href="https://plantgarden.jp/" target="_blank"><img class="_plantgarden" src="/assets/img/plantgarden.svg" alt="Plant GARDEN"></a>
+    <a href="https://www.kazusa.or.jp/" target="_blank"><img class="_kazusa" src="/assets/img/kazusa.png" alt="かずさDNA研究所"></a>
+    <p>©2022 Kazusa DNA Research Instittute</p>
+</div>
+
+
+
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ FOOTER ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->

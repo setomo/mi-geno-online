@@ -1,0 +1,89 @@
+<div id="container">
+
+  <div class = "k_contents">
+    <a class="_howto _c-howto" href="https://plantgarden.jp/ja/help" target="_blank">
+      <img class="_icon" src="/assets/img/howto.svg" alt="?">
+      <span>使い方</span>
+      <img class="_triangle" src="/assets/img/triangle.svg" alt="▶︎">
+    </a>
+    <table class='idcode'>
+      <tr>
+        <th><p class="_required">必須</p><h3>
+          <div class="_text">
+            <p class="_title">取り込むリファレンスゲノム名を記載してください</p>
+          </div></h3>
+        </th>
+        <th>
+          <div class="_r">
+            <div class="_c-narrowDown _narrowDown">
+              <div class="_form">
+                <input class="_inputText" type="text" maxlength="80" value="" placeholder="例）data_covid19">
+              </div>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </table>
+    <table class='genotype'>
+      <tr>
+        <th><p class="_required">必須</p><h3>取り込むリファレンスゲノムファイルを選択してください</h3></th>
+        <th>
+          <div class="_c-fileUpload _fileUpload">
+
+          <div class='fileDropRef' appDnd (fileDropped)="onFileDropped($event, 1, 'genoref')">
+            <div class="_drop_zone">
+              <div class="_dashed">
+                <div id="fbox" style="display: inline-flex;align-items: center;">
+                <img class="_file" src="/assets/img/GSmodeling/icon_file.png">
+                <output class="progress" name='statusGenoFile' for='selectGenoFileName'>
+                  <div id="txtline" style="margin: auto;">
+                  <div class="_text">ファイルをドロップしてアップロード</div><span class="_and">または</span>
+                  </div>
+                </output>
+                <div class='_fileselector _f-tileButton'>
+                  <label class='please' for='selectGenoFileName'><img class="_upload" src="/assets/img/GSmodeling/icon_upload_off.png"><span>ファイルを選択</span></label>
+                  <!--              <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event.target.files)" hidden />-->
+                  <input type="file" id='selectGenoFileName' accept=".gz" (change)="fileBrowseHandler($event, 1, 'reftype')"  hidden>
+                </div>
+              </div>
+              </div>
+            </div>
+            <input type='hidden' id='trainingGenoFileName' name='trainingGenoFileName' value=''>
+            <p class="_linkedFile">ファイルをドロップできない場合はファイル選択ボタンを押してください。 アップロードできるファイル形式はgzipのみです。</p>
+          </div>
+          </div>
+          <div class="files-list">
+            <div class="single-file" *ngFor="let file1 of files_1; let i = index">
+              <img src="assets/img/dnd/ic-file.svg" width="45px" alt="file">
+              <div class="info">
+                <h4 class="name">
+                  {{ file1?.name }}
+                </h4>
+                <p class="size">
+                  {{ formatBytes(file1?.size) }}
+                </p>
+                <app-progress [progress]="file1?.progress"></app-progress>
+              </div>
+              <img src="assets/img/dnd/ic-delete-file.svg" class="delete" width="20px" alt="file" (click)="deleteFile(i, 1)">
+            </div>
+          </div>
+        </th>
+      </tr>
+    </table>
+
+    <div class="col-4" style="display: flex; justify-content: flex-end;margin-left: 700px;">
+      <button style="font-size: 13px;
+    vertical-align: middle;
+    letter-spacing: .03rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;"
+              class="btn btn-success btn-sm"
+              [disabled]="!isSelected"
+              (click)="uploadFiles()"
+      >
+        アップロード
+      </button>
+    </div>
+
+  </div>
+</div>

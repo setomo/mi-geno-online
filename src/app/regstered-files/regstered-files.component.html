@@ -1,0 +1,65 @@
+<h2>Simple View and Export</h2>
+
+<div class = "k_contents">
+  <a class="_howto _c-howto" href="https://plantgarden.jp/ja/help" target="_blank">
+    <img class="_icon" src="/assets/img/howto.svg" alt="?">
+    <span>使い方</span>
+    <img class="_triangle" src="/assets/img/triangle.svg" alt="▶︎">
+  </a>
+  <table class='idcode' id="reftable">
+    <tr>
+      <th><p class="_required">必須</p><h3>
+        <div class="_text">
+          <p class="_title">対象とする配列を選んでください。</p>
+        </div></h3>
+      </th>
+      <th>
+        <div class="_r">
+          <div class="_c-narrowDown _narrowDown">
+            <div class="_form">
+              <mat-form-field style="width: 100%">
+                <input matInput [(ngModel)]="searchText" placeholder="検索" autocomplete="off" (input)="onSearchText()">
+              </mat-form-field>
+            </div>
+            <button style="font-size: 13px;
+    vertical-align: middle;
+    margin-top: 0px;
+    letter-spacing: .03rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;"
+                    class="btn btn-success btn-sm"
+                    [disabled]="!isSelected"
+                    (click)="openTable()"
+            >
+              このサンプルを見る
+            </button>
+          </div>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <mat-nav-list class="country-list" style="text-align: start;">
+          <a mat-list-item *ngFor="let ref of result" (click)="selectReference(ref)">
+            <mat-radio-button color="primary" [checked]="false" [value]="1" (change)="selection = $event.value">
+              {{ ref['species_name'] }}
+            </mat-radio-button>
+          </a>
+        </mat-nav-list>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!--<mat-form-field>-->
+<!--  <input matInput [(ngModel)]="searchText" placeholder="検索" autocomplete="off" (input)="onSearchText()">-->
+<!--</mat-form-field>-->
+
+<!--<mat-nav-list class="country-list">-->
+<!--  <a mat-list-item *ngFor="let ref of result" (click)="selectReference(ref); ">-->
+<!--    <mat-radio-button color="primary" [checked]="false" [value]="1" (change)="selection = $event.value">-->
+<!--      {{ ref['species_name'] }}-->
+<!--    </mat-radio-button>-->
+<!--  </a>-->
+<!--</mat-nav-list>-->

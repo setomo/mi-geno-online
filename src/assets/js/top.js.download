@@ -1,0 +1,23 @@
+document.addEventListener('DOMContentLoaded', function()
+{
+    document.getElementById("menu1").addEventListener("mouseenter", function()
+    {
+        document.getElementById("menu1").classList.add("_on");
+        document.getElementById("menu2").classList.remove("_on");
+    });
+    document.getElementById("menu1").addEventListener("mouseleave", function()
+    {
+        document.getElementById("menu1").classList.add("_on");
+        document.getElementById("menu2").classList.remove("_on");
+    });
+    document.getElementById("menu2").addEventListener("mouseenter", function()
+    {
+        document.getElementById("menu1").classList.remove("_on");
+        document.getElementById("menu2").classList.add("_on");
+    });
+    document.getElementById("menu2").addEventListener("mouseleave", function()
+    {
+        document.getElementById("menu1").classList.add("_on");
+        document.getElementById("menu2").classList.remove("_on");
+    });
+});

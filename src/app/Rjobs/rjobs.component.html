@@ -1,0 +1,21 @@
+<h1>Job Records</h1>
+<ul class="rjobs">
+  <li *ngFor="let rjob of rjobs">
+    <a routerLink="/detail/{{rjob.id}}" style="height: 33px; width: 320px">
+      <img *ngIf="rjob.state==0" src="../../assets/img/baseline_hourglass_full_black_24dp.png" width="28px" />
+<!--      <mat-icon *ngIf="rjob.state==0" class="material-icons color_blue">pause</mat-icon>-->
+      <img *ngIf="rjob.state==1" src="../../assets/img/loading-gears-animation-2-6.gif" width="28px" />
+      <img *ngIf="rjob.state==2" src="../../assets/img/baseline_check_circle_black_24dp.png" width="28px" />
+      <img *ngIf="rjob.state==3" src="../../assets/img/baseline_warning_black_24dp.png" width="28px" />
+      <img *ngIf="rjob.state==4" src="../../assets/img/baseline_warning_black_24dp.png" width="28px" />
+      <!--      <mat-icon *ngIf="rjob.state==2" class="material-icons color_green">check-circle</mat-icon>-->
+<!--      <mat-icon *ngIf="rjob.state==3" class="material-icons color_red">exclamation-triangle</mat-icon>-->
+<!--      <mat-icon *ngIf="rjob.state==4" class="material-icons color_red">ban</mat-icon>-->
+      <span class="badge">
+        {{rjob.createdDate}}
+      </span> {{ (Status[rjob.state])}}
+    </a>
+    <button class="delete" title="delete rjob"
+      (click)="delete(rjob)">x</button>
+  </li>
+</ul>

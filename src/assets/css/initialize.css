@@ -1,0 +1,226 @@
+@charset 'utf-8';
+
+*
+{
+    /*font-family:'Lucida Grande','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック',sans-serif;*/
+    /*font-family: 'Lucida Grande','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',meiryo,'ＭＳ Ｐゴシック',sans-serif;*/
+    /*font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;*/
+    /*font-family:Helvetica, Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;*/
+
+    margin: 0;
+    padding: 0;
+    /*font-family:arial,helvetica,clean,sans-serif;*/
+}
+
+* html *
+{
+    zoom: 1;
+}
+
+html
+{
+    -webkit-text-size-adjust: none;
+}
+
+
+/* @group font-size reset ----------------------------------------- */
+
+body
+{
+    font-size: 12px;
+
+    background-color: transparent;
+}
+
+/*for ie6*/
+* html body
+{
+    font-size: 75%;
+}
+
+/*for ie7*/
+*:first-child + html body
+{
+    font-size: 75%;
+}
+
+/*for ie8*/
+head ~ /* */body
+{
+    font-size: 75%;
+}
+
+html:not(:target) body
+{
+    font-size: 12px;
+}
+
+/* @end */
+
+/*以降のコンテンツ内のフォントサイズは=============================
+10px＝ 84%   |   11px＝ 92%   |   12px＝100%
+13px＝109%   |   14px＝117%   |   15px＝125%
+16px＝134%   |   17px＝142%   |   18px＝150%
+19px＝159%   |   20px＝167%   |   21px＝175%
+22px＝184%   |   23px＝192%   |   24px＝200%
+25px＝209%   |   26px＝217%
+============================================================*/
+
+
+/* @group style adjust ----------------------------------------- */
+
+table
+{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+fieldset,
+img
+{
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var
+{
+    font-weight: normal;
+    font-style: normal;
+}
+
+li
+{
+    list-style: none;
+}
+
+ol li
+{
+    list-style: decimal;
+}
+
+caption,
+th
+{
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-size: 100%;font-weight: normal;
+}
+
+q:before,
+q:after
+{
+    content: '';
+}
+
+abbr,
+acronym
+{
+    font-variant: normal;
+
+    border: 0;
+}
+
+sup,
+sub
+{
+    line-height: -1px;vertical-align: text-top;
+}
+
+sub
+{
+    vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select
+{
+    /*font-family: inherit;font-size: inherit;font-weight: inherit;*/
+}
+
+button
+{
+    border: none;
+    background: none;
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+table
+{
+    font: 100%;
+    font-size: inherit;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt
+{
+    /*font-family: monospace;*/
+}
+
+img
+{
+    line-height: 1%;
+}
+
+p,
+li,
+dt,
+dd,
+th,
+td
+{
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+/* @end */
+
+/* @group clearfix ----------------------------------------- */
+
+.cf:after
+{
+    font-size: 0;
+
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+    content: '.';
+}
+
+* html .cf
+{
+    /* IE6 */
+    zoom: 1;
+}
+
+*:first-child + html .cf
+{
+    /* IE7 */
+    zoom: 1;
+}
+
+/* @end */

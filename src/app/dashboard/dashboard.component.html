@@ -1,0 +1,266 @@
+<!--<h2>Top rjobs</h2>-->
+<!--<div class="rjobs-menu">-->
+<!--  <a *ngFor="let rjob of rjobs"-->
+<!--      routerLink="/detail/{{rjob.id}}">-->
+<!--      {{rjob.name}}-->
+<!--  </a>-->
+<!--</div>-->
+
+<!--<app-rjob-search></app-rjob-search>-->
+<!--<div class="container" appDnd (fileDropped)="onFileDropped($event)">-->
+<!--  <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event)" />-->
+<!--  <img src="assets/img/dnd/ic-upload-file.svg" alt="">-->
+<!--  <h3>Drag and drop file here</h3>-->
+<!--  <h3>or</h3>-->
+<!--  <label for="fileDropRef">Browse for file</label>-->
+<!--</div>-->
+<div id="container">
+
+<div class = "k_contents">
+  <a class="_howto _c-howto" href="https://plantgarden.jp/ja/help" target="_blank">
+    <img class="_icon" src="/assets/img/howto.svg" alt="?">
+    <span>使い方</span>
+    <img class="_triangle" src="/assets/img/triangle.svg" alt="▶︎">
+  </a>
+  <table class='genotype'>
+    <tr>
+      <th><p class="_required">必須</p><h3>vcfファイルをロードしてください</h3></th>
+      <th>
+        <div class='fileDropRef' appDnd (fileDropped)="onFileDropped($event, 1, 'genotype')">
+          <div class="_drop_zone">
+            <div class="_dashed">
+              <img class="_file" src="/assets/img/GSmodeling/icon_file.png">
+              <output class="progress" name='statusGenoFile' for='selectGenoFileName'>
+                ファイルをドロップしてアップロード<span class="_and">または</span>
+              </output>
+              <div class='_fileselector _f-tileButton'>
+                <label class='please' for='selectGenoFileName'><img class="_upload" src="/assets/img/GSmodeling/icon_upload_off.png"><span>ファイルを選択</span></label>
+                <!--              <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event.target.files)" hidden />-->
+                <input type="file" id='selectGenoFileName' accept=".vcf" (change)="fileBrowseHandler($event, 1, 'genotype')"  hidden>
+              </div>
+            </div>
+          </div>
+          <input type='hidden' id='trainingGenoFileName' name='trainingGenoFileName' value=''>
+          <p class="_linkedFile">ファイルをドロップできない場合はファイル選択ボタンを押してください。 アップロードできるファイル形式はvcfのみです。</p>
+        </div>
+        <div class="files-list">
+          <div class="single-file" *ngFor="let file1 of files_1; let i = index">
+            <img src="assets/img/dnd/ic-file.svg" width="45px" alt="file">
+            <div class="info">
+              <h4 class="name">
+                {{ file1?.name }}
+              </h4>
+              <p class="size">
+                {{ formatBytes(file1?.size) }}
+              </p>
+              <app-progress [progress]="file1?.progress"></app-progress>
+            </div>
+            <img src="assets/img/dnd/ic-delete-file.svg" class="delete" width="20px" alt="file" (click)="deleteFile(i, 1)">
+          </div>
+        </div>
+      </th>
+    </tr>
+  </table>
+  <table class='phenotype'>
+    <tr>
+      <th><p class="_required">必須</p><h3>vcfメタデータをロードしてください</h3></th>
+      <th>
+        <div class='fileDropRef' appDnd (fileDropped)="onFileDropped($event, 2, 'phenotype')">
+          <div class="_drop_zone">
+            <div class="_dashed">
+              <img class="_file" src="/assets/img/GSmodeling/icon_file.png">
+              <output class="progress" name='statusPhenoFile' for='selectPhenoFileName'>
+                ファイルをドロップしてアップロード<span class="_and">または</span>
+              </output>
+              <div class='_fileselector _f-tileButton'>
+                <label class='please' for='selectPhenoFileName'><img class="_upload" src="/assets/img/GSmodeling/icon_upload_off.png"><span>ファイルを選択</span></label>
+                <!--              <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event.target.files)" hidden />-->
+                <input type="file" id='selectPhenoFileName' accept=".tsv, .csv, .txt, text/tsv, text/csv, text/plain" (change)="fileBrowseHandler($event, 2,'phenotype')"  hidden>
+              </div>
+            </div>
+          </div>
+          <input type='hidden' id='trainingPhenoFileName' name='trainingPhenoFileName' value=''>
+          <p class="_linkedFile">ファイルをドロップできない場合はファイル選択ボタンを押してください。表現型ファイルについては、<a href="https://mi-geno.kappuku.jp/xxxxxxx" target="_blank">リンク先のファイル</a>をご参照ください。</p>
+        </div>
+        <div class="files-list">
+          <div class="single-file" *ngFor="let file2 of files_2; let j = index">
+            <img src="assets/img/dnd/ic-file.svg" width="45px" alt="file">
+            <div class="info">
+              <h4 class="name">
+                {{ file2?.name }}
+              </h4>
+              <p class="size">
+                {{ formatBytes(file2?.size) }}
+              </p>
+              <app-progress [progress]="file2?.progress"></app-progress>
+            </div>
+            <img src="assets/img/dnd/ic-delete-file.svg" class="delete" width="20px" alt="file" (click)="deleteFile(j, 2)">
+          </div>
+        </div>
+      </th>
+    </tr>
+<!--    <tr>-->
+<!--      <th><p class="_required">必須</p><h3>表現型データの形式を指定してください</h3><p class="_error">形式を指定してください</p></th>-->
+<!--      <th>-->
+<!--        <div class='choose'>-->
+<!--          <label><input type='radio' name='trainingGenoType' [(ngModel)]="genoFile.trainingGenoType"  value='vcf' checked>VCFファイル</label><br>-->
+<!--          <label><input type='radio' name='trainingGenoType' [(ngModel)]="genoFile.trainingGenoType" value='csv'>指定の遺伝子型フォーマットファイル</label>-->
+<!--          <p class="_linkedFile">指定の表現型フォーマットファイルについては、<a href="#">リンク先のファイル</a>をご参照ください。</p>-->
+<!--        </div>-->
+<!--      </th>-->
+<!--    </tr>-->
+  </table>
+  <table class='idcode'>
+    <tr>
+      <th><p class="_required">必須</p><h3>
+        <div class="_text">
+          <p class="_title">対象とする配列を選ぶ、<br>または追加してください</p>
+          <p class="_error">配列を選択してください</p>
+        </div></h3>
+      </th>
+      <th>
+        <div class="_r">
+          <div class="_c-narrowDown _narrowDown">
+            <div class="_form">
+              <input class="_inputText" type="text" maxlength="80" value="" placeholder="例）トマト">
+              <input class="_inputImage" type="image" src="./Mi GENO2_files/search.svg">
+            </div>
+            <input class="_c-submit _submit" type="submit" value="絞り込む">
+          </div>
+          <div class="_c-radioButtonList _radioButtonList">
+            <ul>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx0"><input type="radio" id="xxxxxxxxxx0" name="xxx" value="vvv0" checked=""><div class="_text"><p>Macrotyloma uniflorum_HPK4_r1.11.pseudomolecule_unanchored</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx1"><input type="radio" id="xxxxxxxxxx1" name="xxx" value="vvv1"><div class="_text"><p>Vitis_labruscana_x_Vitis_vinifera_VSMuph_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx2"><input type="radio" id="xxxxxxxxxx2" name="xxx" value="vvv2"><div class="_text"><p>Raphanus_sativus_Okute-Sakurajima_RSAskr_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx3"><input type="radio" id="xxxxxxxxxx3" name="xxx" value="vvv3"><div class="_text"><p>Cucumis_melo_DHL92_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx4"><input type="radio" id="xxxxxxxxxx4" name="xxx" value="vvv4"><div class="_text"><p>Cajanus_cajan_Asha_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx5"><input type="radio" id="xxxxxxxxxx5" name="xxx" value="vvv5"><div class="_text"><p>Brassica_rapa_Z1_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx6"><input type="radio" id="xxxxxxxxxx6" name="xxx" value="vvv6"><div class="_text"><p>Macrotyloma uniflorum_HPK4_r1.11.pseudomolecule_unanchored</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx7"><input type="radio" id="xxxxxxxxxx7" name="xxx" value="vvv7"><div class="_text"><p>Vitis_labruscana_x_Vitis_vinifera_VSMuph_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx8"><input type="radio" id="xxxxxxxxxx8" name="xxx" value="vvv8"><div class="_text"><p>Raphanus_sativus_Okute-Sakurajima_RSAskr_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx9"><input type="radio" id="xxxxxxxxxx9" name="xxx" value="vvv9"><div class="_text"><p>Cucumis_melo_DHL92_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx10"><input type="radio" id="xxxxxxxxxx10" name="xxx" value="vvv10"><div class="_text"><p>Vitis_labruscana_x_Vitis_vinifera_VSMuph_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx11"><input type="radio" id="xxxxxxxxxx11" name="xxx" value="vvv11"><div class="_text"><p>Raphanus_sativus_Okute-Sakurajima_RSAskr_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx12"><input type="radio" id="xxxxxxxxxx12" name="xxx" value="vvv12"><div class="_text"><p>Cucumis_melo_DHL92_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx13"><input type="radio" id="xxxxxxxxxx13" name="xxx" value="vvv13"><div class="_text"><p>Cajanus_cajan_Asha_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx14"><input type="radio" id="xxxxxxxxxx14" name="xxx" value="vvv14"><div class="_text"><p>Brassica_rapa_Z1_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx15"><input type="radio" id="xxxxxxxxxx15" name="xxx" value="vvv15"><div class="_text"><p>Macrotyloma uniflorum_HPK4_r1.11.pseudomolecule_unanchored</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx16"><input type="radio" id="xxxxxxxxxx16" name="xxx" value="vvv16"><div class="_text"><p>Vitis_labruscana_x_Vitis_vinifera_VSMuph_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx17"><input type="radio" id="xxxxxxxxxx17" name="xxx" value="vvv17"><div class="_text"><p>Raphanus_sativus_Okute-Sakurajima_RSAskr_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx18"><input type="radio" id="xxxxxxxxxx18" name="xxx" value="vvv18"><div class="_text"><p>Cucumis_melo_DHL92_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx19"><input type="radio" id="xxxxxxxxxx19" name="xxx" value="vvv19"><div class="_text"><p>Vitis_labruscana_x_Vitis_vinifera_VSMuph_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx20"><input type="radio" id="xxxxxxxxxx20" name="xxx" value="vvv20"><div class="_text"><p>Raphanus_sativus_Okute-Sakurajima_RSAskr_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx21"><input type="radio" id="xxxxxxxxxx21" name="xxx" value="vvv21"><div class="_text"><p>Cucumis_melo_DHL92_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx22"><input type="radio" id="xxxxxxxxxx22" name="xxx" value="vvv22"><div class="_text"><p>Cajanus_cajan_Asha_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx23"><input type="radio" id="xxxxxxxxxx23" name="xxx" value="vvv23"><div class="_text"><p>Brassica_rapa_Z1_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx24"><input type="radio" id="xxxxxxxxxx24" name="xxx" value="vvv24"><div class="_text"><p>Macrotyloma uniflorum_HPK4_r1.11.pseudomolecule_unanchored</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx25"><input type="radio" id="xxxxxxxxxx25" name="xxx" value="vvv25"><div class="_text"><p>Vitis_labruscana_x_Vitis_vinifera_VSMuph_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx26"><input type="radio" id="xxxxxxxxxx26" name="xxx" value="vvv26"><div class="_text"><p>Raphanus_sativus_Okute-Sakurajima_RSAskr_r1.0_genome</p></div></label></li>
+              <li><label class="_radio _c-radio" for="xxxxxxxxxx27"><input type="radio" id="xxxxxxxxxx27" name="xxx" value="vvv27"><div class="_text"><p>Cucumis_melo_DHL92_genome</p></div></label></li>
+            </ul>
+          </div>
+          <div class="_fileUploadContainer">
+            <div class="_l">
+              <p>リストに配列を追加する</p>
+            </div>
+            <div class="_r">
+              <div class="_c-fileUpload _fileUpload">
+                <div class="_drop_zone">
+                  <div class="_dashed">
+                    <img class="_file" src="./Mi GENO2_files/icon_file.svg">
+                    <output class="progress" name="statusGenoFile" for="selectGenoFileName">
+                      <div class="_text">ファイルをドロップしてアップロード</div><span class="_and">または</span>
+                    </output>
+                    <div class="_fileselector _f-tileButton">
+                      <label class="please" for="selectGenoFileName"><img class="_upload_on" src="./Mi GENO2_files/icon_upload_on.svg"><img class="_upload_off" src="./Mi GENO2_files/icon_upload_off.svg"><span>ファイルを選択</span></label>
+                      <input type="file" id="selectGenoFileName" accept=".tsv, .csv, .txt, text/tsv, text/csv, text/plain">
+                    </div>
+                  </div>
+                </div>
+                <p class="_linkedFile">表現型ファイルについては。。。以降を下記に変更。 ファイルの形式は、<a href="https://mi-geno.kappuku.jp/xxxxxxx" target="_blank">リンク先のファイル</a>をご参照ください。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </th>
+    </tr>
+  </table>
+  <div class="col-4" style="display: flex; justify-content: flex-end;">
+    <button style="font-size: 13px;
+    vertical-align: middle;
+    letter-spacing: .03rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;"
+      class="btn btn-success btn-sm"
+      [disabled]="!selectedFiles"
+      (click)="uploadFiles()"
+    >
+      実行
+    </button>
+  </div>
+  <div class="_accordionOpen _f-GSmodelingOpen">
+    <span>検索オプション</span><img src="/img/GSmodeling/opener_on.png">
+  </div>
+  <div class="_accordionClose _f-GSmodelingClose">
+    <span>検索オプション</span><img src="/img/GSmodeling/opener_off.png">
+  </div>
+  <div class="_accordion _GSmodelingContents">
+    <table class="closable">
+      <tr>
+        <th><p class="_required">必須</p><h3>GSモデリングの手法を選択してください<br>(複数選択可)</h3></th>
+        <th>
+          <div class='method'>
+            <label style=" font-size: 15px; letter-spacing: .03rem;"><input type='checkbox' name='Gswitch'  [(ngModel)]="jsonData.GBLUP_RR">GBLUP-RR</label><br>
+            <label style=" font-size: 15px; letter-spacing: .03rem;"><input type='checkbox' name='Bswitch'  [(ngModel)]="jsonData.Bayesian_Lasso" >Bayesian Lasso</label><br>
+            <label style=" font-size: 15px; letter-spacing: .03rem;"><input type='checkbox' name='Rswitch'  [(ngModel)]="jsonData.Random_Forest" >Random Forest</label>
+          </div>
+          <div class='BLoption'>
+            <h5>Bayesian Lassoのオプション</h5>
+            <ul type='disc'>
+              <li><span>Iteration=</span><input type='number' [(ngModel)]="jsonData.nIter" name='nIter' max='100000' min='1000'></li>
+              <li><span>Burn in=</span><input type='number' [(ngModel)]="jsonData.burnIn" name='burnIn' max='10000' min='1000' ></li>
+            </ul>
+          </div>
+          <div class='RFoption'>
+            <h5>Random Forestのオプション</h5>
+            <ul type='disc'>
+              <li><span>N. tree=</span><input type='number' [(ngModel)]="jsonData.ntree" name='ntree' max='1000' min='100' ></li>
+            </ul>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th><h3>GSモデルの評価方法</h3></th>
+        <th>
+          <div class='estimate'>
+            <ul type='disc'>
+              <li>
+                <h5>交差検証の分割数を指定してください</h5>
+                <span>k=</span><input type='number' [(ngModel)]="jsonData.Kcv" name='Kcv' max='10' min='1'>
+                <p class="_annotation">交差検証の分割数がサンプル数を超える場合はエラーとなります。</p>
+              </li>
+              <li>
+                <h5>交差検証のサイクル数を指定してください</h5>
+                <span>n=</span><input type='number' [(ngModel)]="jsonData.Cyclescv" name='Cyclescv' max='10' min='1' >
+                <p class="_annotation">交差検証の分割数がサンプル数と同じ場合は1個抜き交差検証となるので、このフィールドの数値に関わらずサイクル数は1となります。</p>
+              </li>
+            </ul>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th><h3>乱数の初期シード値の設定</h3></th>
+        <th>
+          <div class='RandomSeed'>
+            <ul type='disc'>
+              <li><span>Random seed number=</span><input type='number' [(ngModel)]="jsonData.randomSeedNumber" name='randomSeedNumber' max='65535' min='1' ></li>
+            </ul>
+          </div>
+        </th>
+      </tr>
+    </table>
+    <input type="button" class="_f-GSmodelingClear" value="オプション設定をリセット">
+  </div>
+
+</div>
+</div>

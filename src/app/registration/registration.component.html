@@ -1,0 +1,26 @@
+
+<h2><div *ngIf="tabIndex < 2">Referenceファイル選択</div><div *ngIf="tabIndex === 2">Genome ファイル選択</div></h2>
+<mat-tab-group selectedIndex="0" (selectedTabChange)="changeTab($event)">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span>標準ゲノム:保存済みカスタムゲノム</span>
+    </ng-template>
+    <div class="card" style="height: 400px">
+      <div class="card-body">
+        <app-selectreference></app-selectreference>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span>新規ユーザカスタムゲノムの選択</span>
+    </ng-template>
+    <app-ref-registration  *ngIf="tabIndex === 1"></app-ref-registration>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span>Genome vcf ファイルの選択</span>
+    </ng-template>
+    <app-vcf-registration  *ngIf="tabIndex === 2"></app-vcf-registration>
+  </mat-tab>
+</mat-tab-group>

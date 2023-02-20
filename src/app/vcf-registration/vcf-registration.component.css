@@ -1,0 +1,613 @@
+/* DashboardComponent's private CSS styles */
+
+/*h2 {*/
+/*  text-align: center;*/
+/*}*/
+
+/*.rjobs-menu {*/
+/*  padding: 0;*/
+/*  margin: auto;*/
+/*  max-width: 1000px;*/
+
+/*  !* flexbox *!*/
+/*  display: -webkit-box;*/
+/*  display: -moz-box;*/
+/*  display: -ms-flexbox;*/
+/*  display: -webkit-flex;*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: space-around;*/
+/*  align-content: flex-start;*/
+/*  align-items: flex-start;*/
+/*}*/
+
+/*a {*/
+/*  background-color: #3f525c;*/
+/*  border-radius: 2px;*/
+/*  padding: 1rem;*/
+/*  font-size: 1.2rem;*/
+/*  text-decoration: none;*/
+/*  display: inline-block;*/
+/*  color: #fff;*/
+/*  text-align: center;*/
+/*  width: 100%;*/
+/*  min-width: 70px;*/
+/*  margin: .5rem auto;*/
+/*  box-sizing: border-box;*/
+
+/*  !* flexbox *!*/
+/*  order: 0;*/
+/*  flex: 0 1 auto;*/
+/*  align-self: auto;*/
+/*}*/
+
+/*@media (min-width: 600px) {*/
+/*  a {*/
+/*    width: 18%;*/
+/*    box-sizing: content-box;*/
+/*  }*/
+/*}*/
+
+/*a:hover {*/
+/*  background-color: black;*/
+/*}*/
+
+.k_contents {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  padding-top: 30px;
+  text-align: center;
+}
+.k_contents  ._howto {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+h2{
+  font-family:'Avenir Next',Verdana,sans-serif;
+  font-size:27px;
+  float:left;
+  color:#282828
+}
+._link{
+  font-size:16px;
+  float:right
+}
+._link a{
+  display:inline-block;
+  margin-left:20px
+}
+._link a ._icon{
+  width:22px;
+  height:auto;
+  vertical-align:middle
+}
+._link a span{
+  font-size:13px;
+  margin-left:6px;
+  vertical-align:middle;
+  color:#00bd44
+}
+._link a ._arrow{
+  width:10px;
+  height:auto;
+  margin-left:12px;
+  vertical-align:middle
+}
+
+output.progress {
+  background: none;
+}
+
+table{
+  width:100%
+}
+table tr{
+  border-bottom:solid 1px #e9e9e9
+}
+table tr th{
+  padding-top:10px;
+  padding-bottom:10px;
+  vertical-align:top
+}
+table tr th:first-child{
+  width:371px
+}
+table tr th:first-child h3{
+  font-size:13px;
+  font-weight:600;
+  display:inline-block;
+  color:#6c6c6c
+}
+table tr th:first-child ._required{
+  font-size:12px;
+  display:inline-block;
+  margin-right:10px;
+  padding-right:10px;
+  padding-left:10px;
+  vertical-align:top;
+  color:#fff;
+  border-radius:25px;
+  background-color:red
+}
+table tr th:first-child ._error{
+  font-size:12px;
+  margin-top:5px;
+  margin-left:55px;
+  color:red
+}
+table tr th:nth-child(2) ._drop_zone{
+  position:relative;
+  margin-bottom:10px;
+  padding:10px;
+  background:#f7f7f7
+}
+table tr th:nth-child(2) ._drop_zone ._dashed{
+  padding:30px;
+  text-align:center;
+  border:1px dashed #b3b3b3
+}
+table tr th:nth-child(2) ._drop_zone ._dashed ._file{
+  width:29px;
+  height:auto;
+  vertical-align:middle
+}
+table tr th:nth-child(2) ._drop_zone ._dashed .progress{
+  font-size:13px;
+  margin-left:12px;
+  vertical-align:middle;
+  letter-spacing:.03rem;
+  color:#6c6c6c
+}
+table tr th:nth-child(2) ._drop_zone ._dashed .progress ._and{
+  font-size:12px;
+  margin-left:12px;
+  vertical-align:1px;
+  letter-spacing:.03rem;
+  color:#afafaf
+}
+table tr th:nth-child(2) ._drop_zone ._dashed ._fileselector{
+  display:inline-block;
+  margin-left:20px;
+  padding:10px 20px;
+  vertical-align:middle;
+  border:1px solid #00bb4b;
+  background-color:#fff
+}
+table tr th:nth-child(2) ._drop_zone ._dashed ._fileselector ._upload{
+  width:26px;
+  height:auto;
+  vertical-align:middle
+}
+table tr th:nth-child(2) ._drop_zone ._dashed ._fileselector span{
+  font-size:13px;
+  vertical-align:middle;
+  letter-spacing:.03rem;
+  color:#00bd44
+}
+table tr th:nth-child(2) ._drop_zone ._dashed ._over{
+  background-color:#00bd44
+}
+table tr th:nth-child(2) ._drop_zone ._dashed ._over span{
+  color:#fff
+}
+table tr th:nth-child(2) .choose label{
+  font-size:13px
+}
+table tr th:nth-child(2) ._linkedFile{
+  font-size:11px;
+  margin-top:5px;
+  color:#939393
+}
+table tr th:nth-child(2) ._linkedFile a,   table tr th:nth-child(2) ._linkedFile a:active,   table tr th:nth-child(2) ._linkedFile a:hover,   table tr th:nth-child(2) ._linkedFile a:link,   table tr th:nth-child(2) ._linkedFile a:visited{
+  text-decoration:underline;
+  color:#00bd44
+}
+table tr th:nth-child(2) input[type=text]{
+  font-size:13px;
+  width:100%;
+  height:40px;
+  text-indent:1em;
+  letter-spacing:.03rem;
+  color:#282828;
+  border:1px solid #eee;
+  box-shadow:1px 1px 0 rgba(0,0,0,.1)
+}
+._accordionClose,   ._accordionOpen{
+  font-size:18px;
+  margin-top:40px;
+  padding:10px 20px;
+  cursor:pointer;
+  text-align:left;
+  letter-spacing:.06rem;
+  color:#fff;
+  background-color:#00bd44
+}
+._accordionClose span,   ._accordionOpen span{
+  vertical-align:middle
+}
+._accordionClose img,   ._accordionOpen img{
+  float:right;
+  width:30px;
+  height:auto
+}
+._accordionClose:after,   ._accordionOpen:after{
+  display:block;
+  clear:both;
+  content:''
+}
+._accordionClose{
+  display:none
+}
+._accordion{
+  display:none;
+  text-align:center;
+  background-color:#f7f7f7
+}
+._accordion table{
+  width:90%;
+  margin:auto
+}
+._accordion table tr th{
+  padding-top:10px;
+  padding-bottom:10px
+}
+._accordion table tr th .estimate li{
+  margin-bottom:20px
+}
+._accordion table tr th .estimate li h5{
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:5px;
+  color:#282828
+}
+._accordion table tr th .estimate li span{
+  font-size:15px;
+  display:inline-block;
+  width:30px;
+  letter-spacing:.06rem
+}
+._accordion table tr th .estimate li input{
+  margin-bottom:10px
+}
+._accordion table tr th .estimate li ._annotation{
+  font-size:11px;
+  color:#6c6c6c
+}
+._accordion table tr th .estimate li:last-child{
+  margin-bottom:0
+}
+._accordion table tr th .method{
+  margin-bottom:20px
+}
+._accordion table tr th .method label{
+  font-size:13px;
+  color:#282828
+}
+._accordion table tr th .method label input{
+  margin-right:5px
+}
+._accordion table tr th .BLoption h5,   ._accordion table tr th .RFoption h5{
+  /*font-size:11px;*/
+  /*margin-bottom:10px;*/
+  /*color:#6c6c6c*/
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #282828;
+}
+._accordion table tr th .BLoption li,   ._accordion table tr th .RFoption li{
+  margin-bottom:5px
+}
+._accordion table tr th .BLoption li span,   ._accordion table tr th .RFoption li span{
+  font-size:15px;
+  display:inline-block;
+  width:80px;
+  letter-spacing:.03rem
+}
+._accordion table tr th .BLoption{
+  margin-bottom:30px
+}
+._accordion table tr th .RandomSeed li span{
+  font-size:15px;
+  display:inline-block;
+  width:180px
+}
+._accordion table th:first-child{
+  width:326px
+}
+._accordion table input[type=number]{
+  font-size:14px;
+  width:213px;
+  height:40px;
+  text-indent:1em;
+  letter-spacing:.03rem;
+  color:#282828;
+  border:1px solid #eee;
+  box-shadow:1px 1px 0 rgba(0,0,0,.1)
+}
+._accordion input[type=button]{
+  font-size:13px;
+  min-width:312px;
+  height:40px;
+  margin-top:40px;
+  margin-bottom:40px;
+  padding-right:20px;
+  padding-left:20px;
+  cursor:pointer;
+  letter-spacing:.03rem;
+  color:#939393;
+  border:1px solid #bfbfbf;
+  background-color:#fff
+}
+._accordion input[type=button]:hover{
+  color:#fff;
+  border:1px solid #00bd44;
+  background-color:#00bd44
+}
+input[type=reset],   input[type=submit]{
+  font-size:13px;
+  min-width:151px;
+  height:40px;
+  margin:80px 5px;
+  padding-right:20px;
+  padding-left:20px;
+  cursor:pointer;
+  letter-spacing:.03rem;
+  background-color:#fff
+}
+input[type=reset]{
+  color:#939393;
+  border:1px solid #bfbfbf
+}
+input[type=submit]{
+  color:#00bd44;
+  border:1px solid #00bd44
+}
+input[type=reset]:hover,   input[type=submit]:hover{
+  color:#fff;
+  border:1px solid #00bd44;
+  background-color:#00bd44
+}
+form input[type=radio]{
+  width:18px;
+  height:25px;
+  margin-right:5px;
+  margin-bottom:5px;
+  cursor:pointer;
+  vertical-align:middle;
+  background-image:url(/assets/img/GSmodeling/radiobutton.png);
+  background-position:top;
+  background-size:cover;
+  -webkit-appearance:none;
+  appearance:none
+}
+form input[type=radio]:checked{
+  background-position:bottom
+}
+form input[type=checkbox]{
+  width:20px;
+  height:20px;
+  cursor:pointer;
+  vertical-align:middle;
+  background-image:url(/assets/img/pc_02/checkbox.png);
+  background-position:top;
+  background-size:cover;
+  -webkit-appearance:none;
+  appearance:none
+}
+form input[type=checkbox]:checked{
+  background-position:bottom
+}
+form ._fileselector>input[type=file]{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  cursor:pointer;
+  opacity:0
+}
+
+.fileover {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+
+
+.fileover {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+.files-list {
+  margin-top: 1.5rem;
+}
+.files-list .single-file {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border: dashed 1px #979797;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-grow: 1;
+}
+.files-list .single-file img.delete {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.files-list .single-file .name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #353f4a;
+  margin: 0;
+}
+.files-list .single-file .size {
+  font-size: 12px;
+  font-weight: 500;
+  color: #a4a4a4;
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+.files-list .single-file .info {
+  width: 100%;
+}
+
+table tr th ._c-fileUpload ._drop_zone {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f7f7f7
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed {
+  padding: 30px 0;
+  text-align: center;
+  border: 1px dashed #b3b3b3
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed ._file {
+  width: 29px;
+  height: auto;
+  vertical-align: middle
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed .progress {
+  font-size: 13px;
+  margin-left: 12px;
+  vertical-align: middle;
+  letter-spacing: .03rem;
+  color: #6c6c6c
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed .progress ._text {
+  display: inline-block;
+  text-align: left
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed .progress ._and {
+  font-size: 12px;
+  margin-left: 12px;
+  vertical-align: 1px;
+  letter-spacing: .03rem;
+  color: #afafaf
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed ._fileselector {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px 20px;
+  vertical-align: middle;
+  border: 1px solid #00bb4b;
+  background-color: #fff
+}
+
+#dataExport #inputName ._r ._inputText, ._c-narrowDown ._form ._inputText {
+  letter-spacing: .03rem;
+  border: 1px solid #f1f1f1;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, .0777)
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed ._fileselector ._upload_off, ._c-fileUpload ._drop_zone ._dashed ._fileselector ._upload_on {
+  width: 26px;
+  height: auto;
+  vertical-align: middle
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed ._fileselector ._upload_on {
+  display: none
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed ._fileselector span {
+  font-size: 13px;
+  margin-left: 6px;
+  vertical-align: middle;
+  letter-spacing: .03rem;
+  color: #00bb4b
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed ._fileselector input[type=file] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed ._fileselector:hover {
+  background-color: #00bb4b
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed ._fileselector:hover ._upload_on {
+  display: inline-block
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed ._fileselector:hover ._upload_off {
+  display: none
+}
+
+table tr th ._c-fileUpload ._drop_zone ._dashed ._fileselector:hover span {
+  color: #fff
+}
+
+table tr th ._c-fileUpload ._linkedFile {
+  font-size: 11px;
+  margin-top: 5px;
+  color: #999
+}
+
+table tr th ._c-fileUpload ._linkedFile a, ._c-fileUpload ._linkedFile a:active, ._c-fileUpload ._linkedFile a:hover, ._c-fileUpload ._linkedFile a:link, ._c-fileUpload ._linkedFile a:visited {
+  text-decoration: underline;
+  color: #00bb4b
+}
+/* Shake animation */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}

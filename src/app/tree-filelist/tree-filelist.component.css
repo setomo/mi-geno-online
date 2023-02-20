@@ -1,0 +1,11 @@
+.mat-form-field {
+  margin-right: 4px;
+}
+.mat-tree {     background: #eee; }
+.pad {
+  width: 40px;
+}
+.mat-ion-button button :hover{
+  background-color: #bfbfbf38;
+  color: black;
+}

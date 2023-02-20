@@ -1,0 +1,300 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+p.error {
+  font-weight: bold;
+  color: red;
+}
+
+div.logout {
+  margin-right: 2em;;
+}
+#k_GSmodeling header ._cell1 ._breadcrumb ._icon{width:24px;background-image:url(./assets/img/header/icon_keywordSearch.png)}#k_GSmodeling #k_contents{position:relative;width:90%;margin:auto;padding-top:160px;text-align:center}#k_GSmodeling #k_contents h2{font-family:'Avenir Next',Verdana,sans-serif;font-size:27px;float:left;color:#282828}#k_GSmodeling #k_contents ._link{font-size:16px;float:right}#k_GSmodeling #k_contents ._link a{display:inline-block;margin-left:20px}#k_GSmodeling #k_contents ._link a ._icon{width:22px;height:auto;vertical-align:middle}#k_GSmodeling #k_contents ._link a span{font-size:13px;margin-left:6px;vertical-align:middle;color:#00bd44}#k_GSmodeling #k_contents ._link a ._arrow{width:10px;height:auto;margin-left:12px;vertical-align:middle}#k_GSmodeling #k_contents table{width:100%}#k_GSmodeling #k_contents table tr{border-bottom:solid 1px #e9e9e9}#k_GSmodeling #k_contents table tr th{padding-top:50px;padding-bottom:50px;vertical-align:top}#k_GSmodeling #k_contents table tr th:first-child{width:371px}#k_GSmodeling #k_contents table tr th:first-child h3{font-size:13px;font-weight:600;display:inline-block;color:#6c6c6c}#k_GSmodeling #k_contents table tr th:first-child ._required{font-size:12px;display:inline-block;margin-right:10px;padding-right:10px;padding-left:10px;vertical-align:top;color:#fff;border-radius:25px;background-color:red}#k_GSmodeling #k_contents table tr th:first-child ._error{font-size:12px;margin-top:5px;margin-left:55px;color:red}#k_GSmodeling #k_contents table tr th:nth-child(2) ._drop_zone{position:relative;margin-bottom:10px;padding:10px;background:#f7f7f7}#k_GSmodeling #k_contents table tr th:nth-child(2) ._drop_zone ._dashed{padding:30px;text-align:center;border:1px dashed #b3b3b3}#k_GSmodeling #k_contents table tr th:nth-child(2) ._drop_zone ._dashed ._file{width:29px;height:auto;vertical-align:middle}#k_GSmodeling #k_contents table tr th:nth-child(2) ._drop_zone ._dashed .progress{font-size:13px;margin-left:12px;vertical-align:middle;letter-spacing:.03rem;color:#6c6c6c}#k_GSmodeling #k_contents table tr th:nth-child(2) ._drop_zone ._dashed .progress ._and{font-size:12px;margin-left:12px;vertical-align:1px;letter-spacing:.03rem;color:#afafaf}#k_GSmodeling #k_contents table tr th:nth-child(2) ._drop_zone ._dashed ._fileselector{display:inline-block;margin-left:20px;padding:10px 20px;vertical-align:middle;border:1px solid #00bb4b;background-color:#fff}#k_GSmodeling #k_contents table tr th:nth-child(2) ._drop_zone ._dashed ._fileselector ._upload{width:26px;height:auto;vertical-align:middle}#k_GSmodeling #k_contents table tr th:nth-child(2) ._drop_zone ._dashed ._fileselector span{font-size:13px;vertical-align:middle;letter-spacing:.03rem;color:#00bd44}#k_GSmodeling #k_contents table tr th:nth-child(2) ._drop_zone ._dashed ._over{background-color:#00bd44}#k_GSmodeling #k_contents table tr th:nth-child(2) ._drop_zone ._dashed ._over span{color:#fff}#k_GSmodeling #k_contents table tr th:nth-child(2) .choose label{font-size:13px}#k_GSmodeling #k_contents table tr th:nth-child(2) ._linkedFile{font-size:11px;margin-top:5px;color:#939393}#k_GSmodeling #k_contents table tr th:nth-child(2) ._linkedFile a,#k_GSmodeling #k_contents table tr th:nth-child(2) ._linkedFile a:active,#k_GSmodeling #k_contents table tr th:nth-child(2) ._linkedFile a:hover,#k_GSmodeling #k_contents table tr th:nth-child(2) ._linkedFile a:link,#k_GSmodeling #k_contents table tr th:nth-child(2) ._linkedFile a:visited{text-decoration:underline;color:#00bd44}#k_GSmodeling #k_contents table tr th:nth-child(2) input[type=text]{font-size:13px;width:100%;height:40px;text-indent:1em;letter-spacing:.03rem;color:#282828;border:1px solid #eee;box-shadow:1px 1px 0 rgba(0,0,0,.1)}#k_GSmodeling #k_contents ._accordionClose,#k_GSmodeling #k_contents ._accordionOpen{font-size:18px;margin-top:40px;padding:10px 20px;cursor:pointer;text-align:left;letter-spacing:.06rem;color:#fff;background-color:#00bd44}#k_GSmodeling #k_contents ._accordionClose span,#k_GSmodeling #k_contents ._accordionOpen span{vertical-align:middle}#k_GSmodeling #k_contents ._accordionClose img,#k_GSmodeling #k_contents ._accordionOpen img{float:right;width:30px;height:auto}#k_GSmodeling #k_contents ._accordionClose:after,#k_GSmodeling #k_contents ._accordionOpen:after{display:block;clear:both;content:''}#k_GSmodeling #k_contents ._accordionClose{display:none}#k_GSmodeling #k_contents ._accordion{display:none;text-align:center;background-color:#f7f7f7}#k_GSmodeling #k_contents ._accordion table{width:90%;margin:auto}#k_GSmodeling #k_contents ._accordion table tr th{padding-top:30px;padding-bottom:30px}#k_GSmodeling #k_contents ._accordion table tr th .estimate li{margin-bottom:20px}#k_GSmodeling #k_contents ._accordion table tr th .estimate li h5{font-size:13px;font-weight:600;margin-bottom:5px;color:#282828}#k_GSmodeling #k_contents ._accordion table tr th .estimate li span{font-size:15px;display:inline-block;width:30px;letter-spacing:.06rem}#k_GSmodeling #k_contents ._accordion table tr th .estimate li input{margin-bottom:10px}#k_GSmodeling #k_contents ._accordion table tr th .estimate li ._annotation{font-size:11px;color:#6c6c6c}#k_GSmodeling #k_contents ._accordion table tr th .estimate li:last-child{margin-bottom:0}#k_GSmodeling #k_contents ._accordion table tr th .method{margin-bottom:20px}#k_GSmodeling #k_contents ._accordion table tr th .method label{font-size:13px;color:#282828}#k_GSmodeling #k_contents ._accordion table tr th .method label input{margin-right:5px}#k_GSmodeling #k_contents ._accordion table tr th .BLoption h5,#k_GSmodeling #k_contents ._accordion table tr th .RFoption h5{font-size:11px;margin-bottom:10px;color:#6c6c6c}#k_GSmodeling #k_contents ._accordion table tr th .BLoption li,#k_GSmodeling #k_contents ._accordion table tr th .RFoption li{margin-bottom:5px}#k_GSmodeling #k_contents ._accordion table tr th .BLoption li span,#k_GSmodeling #k_contents ._accordion table tr th .RFoption li span{font-size:15px;display:inline-block;width:80px;letter-spacing:.03rem}#k_GSmodeling #k_contents ._accordion table tr th .BLoption{margin-bottom:30px}#k_GSmodeling #k_contents ._accordion table tr th .RandomSeed li span{font-size:15px;display:inline-block;width:180px}#k_GSmodeling #k_contents ._accordion table th:first-child{width:326px}#k_GSmodeling #k_contents ._accordion table input[type=number]{font-size:14px;width:213px;height:40px;text-indent:1em;letter-spacing:.03rem;color:#282828;border:1px solid #eee;box-shadow:1px 1px 0 rgba(0,0,0,.1)}#k_GSmodeling #k_contents ._accordion input[type=button]{font-size:13px;min-width:312px;height:40px;margin-top:40px;margin-bottom:40px;padding-right:20px;padding-left:20px;cursor:pointer;letter-spacing:.03rem;color:#939393;border:1px solid #bfbfbf;background-color:#fff}#k_GSmodeling #k_contents ._accordion input[type=button]:hover{color:#fff;border:1px solid #00bd44;background-color:#00bd44}#k_GSmodeling #k_contents input[type=reset],#k_GSmodeling #k_contents input[type=submit]{font-size:13px;min-width:151px;height:40px;margin:80px 5px;padding-right:20px;padding-left:20px;cursor:pointer;letter-spacing:.03rem;background-color:#fff}#k_GSmodeling #k_contents input[type=reset]{color:#939393;border:1px solid #bfbfbf}#k_GSmodeling #k_contents input[type=submit]{color:#00bd44;border:1px solid #00bd44}#k_GSmodeling #k_contents input[type=reset]:hover,#k_GSmodeling #k_contents input[type=submit]:hover{color:#fff;border:1px solid #00bd44;background-color:#00bd44}#k_GSmodeling #k_contents form input[type=radio]{width:18px;height:25px;margin-right:5px;margin-bottom:5px;cursor:pointer;vertical-align:middle;background-image:url(./assets/img/GSmodeling/radiobutton.png);background-position:top;background-size:cover;-webkit-appearance:none;appearance:none}#k_GSmodeling #k_contents form input[type=radio]:checked{background-position:bottom}#k_GSmodeling #k_contents form input[type=checkbox]{width:20px;height:20px;cursor:pointer;vertical-align:middle;background-image:url(./assets/img/pc_02/checkbox.png);background-position:top;background-size:cover;-webkit-appearance:none;appearance:none}#k_GSmodeling #k_contents form input[type=checkbox]:checked{background-position:bottom}#k_GSmodeling #k_contents form ._fileselector>input[type=file]{position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;opacity:0}
+/* Global Styles */
+/*zoomプロパティは非推奨(IE系のみ使う)なのでtransform: scale(1)へ変換*/@charset "utf-8";*{font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3',Meiryo,メイリオ,Osaka,'MS PGothic',arial,helvetica,sans-serif;margin:0;padding:0}  * html *{transform: scale(1)}  html{-webkit-text-size-adjust:none}  body{font-size:12px;background-color:transparent}  * html body,:first-child+html body,head~body{font-size:75%}  html:not(:target) body{font-size:12px}  table{border-spacing:0;border-collapse:collapse}  fieldset,img{border:0}  address,caption,cite,code,dfn,em,th,var{font-weight:400;font-style:normal}  li{list-style:none}  ol li{list-style:decimal}  caption,th{text-align:left}  h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}  q:after,q:before{content:''}  abbr,acronym{font-variant:normal;border:0}  sub,sup{line-height: 1px;vertical-align:text-top}  sub{vertical-align:text-bottom}  input,select,textarea{font-family:inherit;font-size:inherit;font-weight:inherit}  button{border:none;background:0 0}  strong{font-weight:700}  table{font:100%;font-size:inherit}  code,kbd,pre,samp,tt{font-family:monospace}  img{line-height:1%}  dd,dt,li,p,td,th{font-size:100%}  a{text-decoration:none}  .cf:after{font-size:0;display:block;visibility:hidden;clear:both;height:0;content:'.'}  * html .cf,:first-child+html .cf{transform: scale(1)}  :focus{outline:0}  body{min-width:1265px;background-color:#fff}  header{position:fixed;z-index:100;width:100%;min-width:1265px}  header ._cell0{position:relative;height:80px;background-color:#f7f7f7}  header ._cell0 ._container{position:relative;width:90%;min-width:1152px;margin:auto}  header ._cell0 ._container ._title{position:relative;float:left;width:136px;height:auto;margin-top:10px}  header ._cell0 ._container ._search{position:relative;float:left;width:565px;margin-top:20px;margin-left:52px}  header ._cell0 ._container ._search ._inputText{font-size:13px;position:absolute;top:0;left:0;width:100%;height:40px;text-indent:3.6em;letter-spacing:.03rem;color:#282828;border:none}  header ._cell0 ._container ._search ._inputText::placeholder{color:#bdbdbd}  header ._cell0 ._container ._search ._inputImage{position:absolute;top:6px;left:8px;width:30px;height:auto}  header ._cell0 ._container ._howto,header ._cell0 ._container ._parlance{position:relative;float:left;margin-top:26px}  header ._cell0 ._container ._howto img,header ._cell0 ._container ._parlance img{width:30px;height:auto;vertical-align:middle}  header ._cell0 ._container ._howto span,header ._cell0 ._container ._parlance span{font-size:15px;margin-left:5px;vertical-align:middle;letter-spacing:.06rem;color:#6c6c6c}  header ._cell0 ._container ._howto ._arrow,header ._cell0 ._container ._parlance ._arrow{color:gray;margin-left:5px}  header ._cell0 ._container ._howto{margin-left:22px}  header ._cell0 ._container ._parlance{margin-left:22px;cursor:pointer}  header ._cell0 ._container a:active,header ._cell0 ._container a:hover,header ._cell0 ._container a:link,header ._cell0 ._container a:visited{color:#939393}  header ._cell0 ._container ._language{position:absolute;top:29px;right:0}  header ._cell1{position:relative;height:40px;border-bottom:solid 1px #ddddda;background-color:#fff;box-shadow:0 2px 2px rgba(0,0,0,.03)}  header ._cell1 ._container{position:relative;width:90%;min-width:1152px;margin:auto}  header ._cell1 ._container ._breadcrumb{position:absolute;top:5px;left:0}  header ._cell1 ._container ._breadcrumb ._icon{display:inline-block;width:0;height:30px;margin-right:5px;vertical-align:middle;background-repeat:no-repeat;background-size:contain}  header ._cell1 ._container ._breadcrumb a,header ._cell1 ._container ._breadcrumb p{font-size:11px;display:inline;vertical-align:middle;letter-spacing:.06rem;color:#6c6c6c}  header ._cell1 ._container ._breadcrumb a:active,header ._cell1 ._container ._breadcrumb a:hover,header ._cell1 ._container ._breadcrumb a:link,header ._cell1 ._container ._breadcrumb a:visited{color:#6c6c6c}  header ._cell1 ._container ._hamburger{position:absolute;top:5px;right:0;width:30px;height:auto;cursor:pointer}  header ._searchTerms{position:absolute;left:880px;display:none;width:355px;opacity:0;background-color:#f7f7f7;box-shadow:1px 4px 2px rgba(0,0,0,.1)}  header ._searchTerms ._form{position:relative;height:115px;border-top:solid 1px #f7f7f7;border-left:solid 1px #f7f7f7;background-color:#fff;box-shadow:0 6px 3px rgba(0,0,0,.02)}  header ._searchTerms ._form ._title{position:absolute;top:12px;left:18px}  header ._searchTerms ._form ._title img{vertical-align:middle}  header ._searchTerms ._form ._title span{font-size:15px;margin-left:10px;vertical-align:middle;letter-spacing:.06rem;color:#282828}  header ._searchTerms ._form ._inputText{font-size:14px;position:absolute;top:55px;left:20px;width:318px;height:40px;text-indent:1em;letter-spacing:.03rem;color:#282828;border:1px solid #eee}  header ._searchTerms ._form ._inputText::placeholder{color:#bdbdbd}  header ._searchTerms ._form ._close{position:absolute;top:12px;right:12px;cursor:pointer}  header ._searchTerms ._contents{position:relative;min-height:360px;padding:27px 33px 36px}  header ._searchTerms ._contents ._term{font-size:15px;letter-spacing:.06rem;color:#282828}  header ._searchTerms ._contents ._description{font-size:14px;line-height:2rem;margin-top:15px;color:#282828}  header ._menu{position:absolute;top:80px;left:0;display:none;overflow-x:hidden;overflow-y:auto;width:100%;height:100%;opacity:0;background-color:rgba(255,255,255,.9)}  header ._menu ._c-container{width:90%}  header ._menu ._c-container ._close{position:absolute;top:5px;right:0;width:30px;height:auto;cursor:pointer}  header ._menu ._c-container ._analysis,header ._menu ._c-container ._datalist,header ._menu ._c-container ._search{position:relative;width:420px;margin-left:auto}  header ._menu ._c-container ._analysis hr,header ._menu ._c-container ._datalist hr,header ._menu ._c-container ._search hr{position:relative;width:3000px;height:1px;margin-top:20px;border:0;background-color:#e4e4e4}  header ._menu ._c-container ._analysis ._l img,header ._menu ._c-container ._analysis ._l span,header ._menu ._c-container ._analysis ._r img,header ._menu ._c-container ._analysis ._r span,header ._menu ._c-container ._datalist ._l img,header ._menu ._c-container ._datalist ._l span,header ._menu ._c-container ._datalist ._r img,header ._menu ._c-container ._datalist ._r span,header ._menu ._c-container ._search ._l img,header ._menu ._c-container ._search ._l span,header ._menu ._c-container ._search ._r img,header ._menu ._c-container ._search ._r span{vertical-align:middle}  header ._menu ._c-container ._analysis ._l,header ._menu ._c-container ._datalist ._l,header ._menu ._c-container ._search ._l{float:left;width:180px;margin-top:8px}  header ._menu ._c-container ._analysis ._l img,header ._menu ._c-container ._datalist ._l img,header ._menu ._c-container ._search ._l img{width:40px;height:auto}  header ._menu ._c-container ._analysis ._l span,header ._menu ._c-container ._datalist ._l span,header ._menu ._c-container ._search ._l span{font-size:15px;margin-left:10px;vertical-align:middle;letter-spacing:.06rem;color:#282828}  header ._menu ._c-container ._analysis ._r,header ._menu ._c-container ._datalist ._r,header ._menu ._c-container ._search ._r{float:right;width:200px;margin-top:16px}  header ._menu ._c-container ._analysis ._r img,header ._menu ._c-container ._datalist ._r img,header ._menu ._c-container ._search ._r img{width:30px;height:auto}  header ._menu ._c-container ._analysis ._r span,header ._menu ._c-container ._datalist ._r span,header ._menu ._c-container ._search ._r span{font-size:15px;margin-left:15px;vertical-align:middle;color:#6c6c6c}  header ._menu ._c-container ._analysis ._r p,header ._menu ._c-container ._datalist ._r p,header ._menu ._c-container ._search ._r p{margin-bottom:12px}  header ._menu ._c-container ._analysis ._r a,header ._menu ._c-container ._datalist ._r a,header ._menu ._c-container ._search ._r a{display:inline-block;min-width:160px;margin-bottom:12px}  header ._menu ._c-container ._analysis ._r a:active,header ._menu ._c-container ._analysis ._r a:hover,header ._menu ._c-container ._analysis ._r a:link,header ._menu ._c-container ._analysis ._r a:visited,header ._menu ._c-container ._datalist ._r a:active,header ._menu ._c-container ._datalist ._r a:hover,header ._menu ._c-container ._datalist ._r a:link,header ._menu ._c-container ._datalist ._r a:visited,header ._menu ._c-container ._search ._r a:active,header ._menu ._c-container ._search ._r a:hover,header ._menu ._c-container ._search ._r a:link,header ._menu ._c-container ._search ._r a:visited{color:#6c6c6c}  header ._menu ._c-container ._search{padding-top:80px}
+footer{position:relative;z-index:10;text-align:center;background-color:#f7f7f7}
+footer ._linkContainer{border-bottom:solid 1px #e9e9e8}footer ._linkContainer ._link{display:inline-block;margin-bottom:10px;vertical-align:top}footer ._linkContainer ._link ._icon{width:auto;height:50px}footer ._linkContainer ._link a{text-align:center}footer ._linkContainer ._link a p{font-size:11px;letter-spacing:.06rem;color:#6c6c6c}footer ._linkContainer hr{display:inline-block;width:1px;height:60px;margin:10px 40px;vertical-align:top;border:0;background-color:#e9e9e8}footer ._kazusa,footer ._plantgarden{width:auto;height:50px;margin-top:33px}footer ._menu{position:relative;margin-top:30px;text-align:center}footer ._menu ._analysis,footer ._menu ._datalist,footer ._menu ._search{position:relative;display:inline-block;margin-right:15px;margin-left:15px;vertical-align:top}footer ._menu ._analysis ._title,footer ._menu ._datalist ._title,footer ._menu ._search ._title{margin:auto auto 7px}footer ._menu ._analysis ._title img,footer ._menu ._datalist ._title img,footer ._menu ._search ._title img{width:30px;height:auto;vertical-align:middle}footer ._menu ._analysis ._title span,footer ._menu ._datalist ._title span,footer ._menu ._search ._title span{font-size:14px;margin-left:5px;vertical-align:middle;letter-spacing:.06rem;color:#6c6c6c}footer ._menu ._analysis ._btn,footer ._menu ._datalist ._btn,footer ._menu ._search ._btn{text-align:left}footer ._menu ._analysis ._btn ._dataAll,footer ._menu ._analysis ._btn ._dataMarker,footer ._menu ._analysis ._btn ._dataTrait,footer ._menu ._analysis ._btn ._fromArray,footer ._menu ._analysis ._btn ._fromGene,footer ._menu ._analysis ._btn ._fromMarker,footer ._menu ._analysis ._btn ._fromPlantspecies,footer ._menu ._analysis ._btn ._fromTraits,footer ._menu ._analysis ._btn ._keywordSearch,footer ._menu ._analysis ._btn ._otherAnalysis,footer ._menu ._analysis ._btn ._snpDetection,footer ._menu ._datalist ._btn ._dataAll,footer ._menu ._datalist ._btn ._dataMarker,footer ._menu ._datalist ._btn ._dataTrait,footer ._menu ._datalist ._btn ._fromArray,footer ._menu ._datalist ._btn ._fromGene,footer ._menu ._datalist ._btn ._fromMarker,footer ._menu ._datalist ._btn ._fromPlantspecies,footer ._menu ._datalist ._btn ._fromTraits,footer ._menu ._datalist ._btn ._keywordSearch,footer ._menu ._datalist ._btn ._otherAnalysis,footer ._menu ._datalist ._btn ._snpDetection,footer ._menu ._search ._btn ._dataAll,footer ._menu ._search ._btn ._dataMarker,footer ._menu ._search ._btn ._dataTrait,footer ._menu ._search ._btn ._fromArray,footer ._menu ._search ._btn ._fromGene,footer ._menu ._search ._btn ._fromMarker,footer ._menu ._search ._btn ._fromPlantspecies,footer ._menu ._search ._btn ._fromTraits,footer ._menu ._search ._btn ._keywordSearch,footer ._menu ._search ._btn ._otherAnalysis,footer ._menu ._search ._btn ._snpDetection{position:relative;display:inline-block;width:94px;height:94px;margin-top:5px;vertical-align:bottom;background-repeat:no-repeat;background-position:top;background-size:cover;box-shadow:1px 1px 0 rgba(0,0,0,.05)}footer ._menu ._analysis ._btn ._dataAll p,footer ._menu ._analysis ._btn ._dataMarker p,footer ._menu ._analysis ._btn ._dataTrait p,footer ._menu ._analysis ._btn ._fromArray p,footer ._menu ._analysis ._btn ._fromGene p,footer ._menu ._analysis ._btn ._fromMarker p,footer ._menu ._analysis ._btn ._fromPlantspecies p,footer ._menu ._analysis ._btn ._fromTraits p,footer ._menu ._analysis ._btn ._keywordSearch p,footer ._menu ._analysis ._btn ._otherAnalysis p,footer ._menu ._analysis ._btn ._snpDetection p,footer ._menu ._datalist ._btn ._dataAll p,footer ._menu ._datalist ._btn ._dataMarker p,footer ._menu ._datalist ._btn ._dataTrait p,footer ._menu ._datalist ._btn ._fromArray p,footer ._menu ._datalist ._btn ._fromGene p,footer ._menu ._datalist ._btn ._fromMarker p,footer ._menu ._datalist ._btn ._fromPlantspecies p,footer ._menu ._datalist ._btn ._fromTraits p,footer ._menu ._datalist ._btn ._keywordSearch p,footer ._menu ._datalist ._btn ._otherAnalysis p,footer ._menu ._datalist ._btn ._snpDetection p,footer ._menu ._search ._btn ._dataAll p,footer ._menu ._search ._btn ._dataMarker p,footer ._menu ._search ._btn ._dataTrait p,footer ._menu ._search ._btn ._fromArray p,footer ._menu ._search ._btn ._fromGene p,footer ._menu ._search ._btn ._fromMarker p,footer ._menu ._search ._btn ._fromPlantspecies p,footer ._menu ._search ._btn ._fromTraits p,footer ._menu ._search ._btn ._keywordSearch p,footer ._menu ._search ._btn ._otherAnalysis p,footer ._menu ._search ._btn ._snpDetection p{font-size:10px;line-height:.8rem;position:absolute;top:50%;left:50%;width:90%;margin-top:30px;transform:translate(-50%,-50%);text-align:center;color:#6c6c6c}footer ._menu ._analysis ._btn ._dataAll:hover,footer ._menu ._analysis ._btn ._dataMarker:hover,footer ._menu ._analysis ._btn ._dataTrait:hover,footer ._menu ._analysis ._btn ._fromArray:hover,footer ._menu ._analysis ._btn ._fromGene:hover,footer ._menu ._analysis ._btn ._fromMarker:hover,footer ._menu ._analysis ._btn ._fromPlantspecies:hover,footer ._menu ._analysis ._btn ._fromTraits:hover,footer ._menu ._analysis ._btn ._keywordSearch:hover,footer ._menu ._analysis ._btn ._otherAnalysis:hover,footer ._menu ._analysis ._btn ._snpDetection:hover,footer ._menu ._datalist ._btn ._dataAll:hover,footer ._menu ._datalist ._btn ._dataMarker:hover,footer ._menu ._datalist ._btn ._dataTrait:hover,footer ._menu ._datalist ._btn ._fromArray:hover,footer ._menu ._datalist ._btn ._fromGene:hover,footer ._menu ._datalist ._btn ._fromMarker:hover,footer ._menu ._datalist ._btn ._fromPlantspecies:hover,footer ._menu ._datalist ._btn ._fromTraits:hover,footer ._menu ._datalist ._btn ._keywordSearch:hover,footer ._menu ._datalist ._btn ._otherAnalysis:hover,footer ._menu ._datalist ._btn ._snpDetection:hover,footer ._menu ._search ._btn ._dataAll:hover,footer ._menu ._search ._btn ._dataMarker:hover,footer ._menu ._search ._btn ._dataTrait:hover,footer ._menu ._search ._btn ._fromArray:hover,footer ._menu ._search ._btn ._fromGene:hover,footer ._menu ._search ._btn ._fromMarker:hover,footer ._menu ._search ._btn ._fromPlantspecies:hover,footer ._menu ._search ._btn ._fromTraits:hover,footer ._menu ._search ._btn ._keywordSearch:hover,footer ._menu ._search ._btn ._otherAnalysis:hover,footer ._menu ._search ._btn ._snpDetection:hover{background-position:bottom}footer ._menu ._analysis ._btn ._dataAll:hover p,footer ._menu ._analysis ._btn ._dataMarker:hover p,footer ._menu ._analysis ._btn ._dataTrait:hover p,footer ._menu ._analysis ._btn ._fromArray:hover p,footer ._menu ._analysis ._btn ._fromGene:hover p,footer ._menu ._analysis ._btn ._fromMarker:hover p,footer ._menu ._analysis ._btn ._fromPlantspecies:hover p,footer ._menu ._analysis ._btn ._fromTraits:hover p,footer ._menu ._analysis ._btn ._keywordSearch:hover p,footer ._menu ._analysis ._btn ._otherAnalysis:hover p,footer ._menu ._analysis ._btn ._snpDetection:hover p,footer ._menu ._datalist ._btn ._dataAll:hover p,footer ._menu ._datalist ._btn ._dataMarker:hover p,footer ._menu ._datalist ._btn ._dataTrait:hover p,footer ._menu ._datalist ._btn ._fromArray:hover p,footer ._menu ._datalist ._btn ._fromGene:hover p,footer ._menu ._datalist ._btn ._fromMarker:hover p,footer ._menu ._datalist ._btn ._fromPlantspecies:hover p,footer ._menu ._datalist ._btn ._fromTraits:hover p,footer ._menu ._datalist ._btn ._keywordSearch:hover p,footer ._menu ._datalist ._btn ._otherAnalysis:hover p,footer ._menu ._datalist ._btn ._snpDetection:hover p,footer ._menu ._search ._btn ._dataAll:hover p,footer ._menu ._search ._btn ._dataMarker:hover p,footer ._menu ._search ._btn ._dataTrait:hover p,footer ._menu ._search ._btn ._fromArray:hover p,footer ._menu ._search ._btn ._fromGene:hover p,footer ._menu ._search ._btn ._fromMarker:hover p,footer ._menu ._search ._btn ._fromPlantspecies:hover p,footer ._menu ._search ._btn ._fromTraits:hover p,footer ._menu ._search ._btn ._keywordSearch:hover p,footer ._menu ._search ._btn ._otherAnalysis:hover p,footer ._menu ._search ._btn ._snpDetection:hover p{color:#fff}footer ._menu ._analysis ._btn ._fromPlantspecies,footer ._menu ._datalist ._btn ._fromPlantspecies,footer ._menu ._search ._btn ._fromPlantspecies{background-image:url(./assets/img/footer/btn_fromPlantspecies.png)}footer ._menu ._analysis ._btn ._fromTraits,footer ._menu ._datalist ._btn ._fromTraits,footer ._menu ._search ._btn ._fromTraits{background-image:url(./assets/img/footer/btn_fromTraits.png)}footer ._menu ._analysis ._btn ._fromArray,footer ._menu ._datalist ._btn ._fromArray,footer ._menu ._search ._btn ._fromArray{background-image:url(./assets/img/footer/btn_fromArray.png)}footer ._menu ._analysis ._btn ._snpDetection,footer ._menu ._datalist ._btn ._snpDetection,footer ._menu ._search ._btn ._snpDetection{background-image:url(./assets/img/footer/btn_snpDetection.png)}footer ._menu ._analysis ._btn ._otherAnalysis,footer ._menu ._datalist ._btn ._otherAnalysis,footer ._menu ._search ._btn ._otherAnalysis{background-image:url(./assets/img/footer/btn_otherAnalysis.png)}footer ._menu ._analysis ._btn ._dataAll,footer ._menu ._datalist ._btn ._dataAll,footer ._menu ._search ._btn ._dataAll{background-image:url(./assets/img/footer/btn_dataAll.png)}footer ._menu ._analysis ._btn ._dataMarker,footer ._menu ._datalist ._btn ._dataMarker,footer ._menu ._search ._btn ._dataMarker{background-image:url(./assets/img/footer/btn_dataMarker.png)}footer ._menu ._analysis ._btn ._dataTrait,footer ._menu ._datalist ._btn ._dataTrait,footer ._menu ._search ._btn ._dataTrait{background-image:url(./assets/img/footer/btn_dataTrait.png)}footer ._menu ._analysis ._btn ._fromGene,footer ._menu ._datalist ._btn ._fromGene,footer ._menu ._search ._btn ._fromGene{background-image:url(./assets/img/footer/btn_fromGene.png)}footer ._menu ._analysis ._btn ._fromMarker,footer ._menu ._datalist ._btn ._fromMarker,footer ._menu ._search ._btn ._fromMarker{background-image:url(./assets/img/footer/btn_fromMarker.png)}footer ._menu ._analysis ._btn ._keywordSearch,footer ._menu ._datalist ._btn ._keywordSearch,footer ._menu ._search ._btn ._keywordSearch{background-image:url(./assets/img/footer/btn_keywordSearch.png)}footer ._navigation{margin-top:30px}footer ._navigation a{font-size:13px;display:inline;margin:10px;vertical-align:middle;letter-spacing:.06rem;color:#6c6c6c}
+._c-container{position:relative;width:1160px;margin:auto}
+._c-language ._en,._c-language ._ja{font-size:14px;float:left;height:22px;padding-right:17px;padding-left:17px;cursor:pointer;border:1px solid #00bd44}
+._c-language ._on,._c-language ._on a:active,._c-language ._on a:hover,._c-language ._on a:link,._c-language ._on a:visited{color:#fff;background-color:#00bd44}
+._c-language ._off,._c-language ._off a:active,._c-language ._off a:hover,._c-language ._off a:link,._c-language ._off a:visited{color:#00bd44;background-color:#fff}
+._c-shadow{box-shadow:1px 1px 0 rgba(0,0,0,.0777)}._c-paging{text-align:center}._c-paging img{width:30px;height:auto;cursor:pointer;vertical-align:middle}._c-paging span{font-family:'Avenir Next',Verdana,sans-serif;font-size:16px;margin-right:9px;margin-left:9px;cursor:pointer;vertical-align:middle;color:#aaa}._c-paging span a{font-family:'Avenir Next',Verdana,sans-serif;color:#aaa}._c-paging ._active{cursor:default;color:#00bd44}._c-paging ._dot{cursor:default;vertical-align:top}._c-paging ._off{cursor:default;opacity:0}._c-backToTop{display:block;margin-top:90px;margin-bottom:110px;text-align:center}._c-backToTop a img{width:30px;height:auto;vertical-align:middle}._c-backToTop a span{font-family:'Avenir Next',Verdana,sans-serif;font-size:16px;margin-left:5px;vertical-align:middle;letter-spacing:.09rem;color:#6c6c6c}._c-loading{margin-top:30px;margin-bottom:120px;text-align:center}._c-alphabetContainer{z-index:10;position:absolute;width:256px;height:155px;background-image:url(./assets/img/pc_02/alphabetBackground.png)}._c-alphabetContainer ._row1,._c-alphabetContainer ._row2,._c-alphabetContainer ._row3{position:absolute;left:24px}._c-alphabetContainer ._row1 p,._c-alphabetContainer ._row2 p,._c-alphabetContainer ._row3 p{font-family:'Avenir Next',Verdana,sans-serif;font-size:20px;display:inline-block;width:20px;height:27px;cursor:pointer;text-align:center;color:#fff;border-bottom:solid #00bd44 2px}._c-alphabetContainer ._row1 p:hover,._c-alphabetContainer ._row2 p:hover,._c-alphabetContainer ._row3 p:hover{border-bottom:solid #fff 2px}._c-alphabetContainer ._row1 ._off,._c-alphabetContainer ._row1 ._off:hover,._c-alphabetContainer ._row2 ._off,._c-alphabetContainer ._row2 ._off:hover,._c-alphabetContainer ._row3 ._off,._c-alphabetContainer ._row3 ._off:hover{cursor:default;opacity:.5;border-bottom:solid #00bd44 2px}._c-alphabetContainer ._row1{top:30px}._c-alphabetContainer ._row2{top:70px}._c-alphabetContainer ._row3{top:110px}._c-syllabaryContainer{z-index:10;position:absolute;width:324px;height:155px;background-image:url(./assets/img/pc_02/syllabaryBackground.png)}._c-syllabaryContainer ._row1,._c-syllabaryContainer ._row10,._c-syllabaryContainer ._row2,._c-syllabaryContainer ._row3,._c-syllabaryContainer ._row4,._c-syllabaryContainer ._row5,._c-syllabaryContainer ._row6,._c-syllabaryContainer ._row7,._c-syllabaryContainer ._row8,._c-syllabaryContainer ._row9{position:absolute}._c-syllabaryContainer ._row1 p,._c-syllabaryContainer ._row10 p,._c-syllabaryContainer ._row2 p,._c-syllabaryContainer ._row3 p,._c-syllabaryContainer ._row4 p,._c-syllabaryContainer ._row5 p,._c-syllabaryContainer ._row6 p,._c-syllabaryContainer ._row7 p,._c-syllabaryContainer ._row8 p,._c-syllabaryContainer ._row9 p{font-size:15px;display:inline-block;width:15px;height:22px;cursor:pointer;text-align:center;color:#fff;border-bottom:solid #00bd44 2px}._c-syllabaryContainer ._row1 p:hover,._c-syllabaryContainer ._row10 p:hover,._c-syllabaryContainer ._row2 p:hover,._c-syllabaryContainer ._row3 p:hover,._c-syllabaryContainer ._row4 p:hover,._c-syllabaryContainer ._row5 p:hover,._c-syllabaryContainer ._row6 p:hover,._c-syllabaryContainer ._row7 p:hover,._c-syllabaryContainer ._row8 p:hover,._c-syllabaryContainer ._row9 p:hover{border-bottom:solid #fff 2px}._c-syllabaryContainer ._row1 ._off,._c-syllabaryContainer ._row1 ._off:hover,._c-syllabaryContainer ._row10 ._off,._c-syllabaryContainer ._row10 ._off:hover,._c-syllabaryContainer ._row2 ._off,._c-syllabaryContainer ._row2 ._off:hover,._c-syllabaryContainer ._row3 ._off,._c-syllabaryContainer ._row3 ._off:hover,._c-syllabaryContainer ._row4 ._off,._c-syllabaryContainer ._row4 ._off:hover,._c-syllabaryContainer ._row5 ._off,._c-syllabaryContainer ._row5 ._off:hover,._c-syllabaryContainer ._row6 ._off,._c-syllabaryContainer ._row6 ._off:hover,._c-syllabaryContainer ._row7 ._off,._c-syllabaryContainer ._row7 ._off:hover,._c-syllabaryContainer ._row8 ._off,._c-syllabaryContainer ._row8 ._off:hover,._c-syllabaryContainer ._row9 ._off,._c-syllabaryContainer ._row9 ._off:hover{cursor:default;opacity:.5;border-bottom:solid #00bd44 2px}._c-syllabaryContainer ._row1{top:28px;left:14px}._c-syllabaryContainer ._row2{top:28px;left:117px}._c-syllabaryContainer ._row3{top:28px;left:220px}._c-syllabaryContainer ._row4{top:58px;left:14px}._c-syllabaryContainer ._row5{top:58px;left:117px}._c-syllabaryContainer ._row6{top:58px;left:220px}._c-syllabaryContainer ._row7{top:88px;left:14px}._c-syllabaryContainer ._row8{top:88px;left:117px}._c-syllabaryContainer ._row8 p{margin-right:18px}._c-syllabaryContainer ._row9{top:88px;left:220px}._c-syllabaryContainer ._row10{top:118px;left:14px}._c-syllabaryContainer ._row10 p{margin-right:18px}._c-download ._downloadIcon,._c-download ._geneSequenceIcon,._c-download ._jbrowseIcon,._c-geneSequence ._downloadIcon,._c-geneSequence ._geneSequenceIcon,._c-geneSequence ._jbrowseIcon,._c-jbrowse ._downloadIcon,._c-jbrowse ._geneSequenceIcon,._c-jbrowse ._jbrowseIcon{position:relative;display:inline-block;width:94px;height:94px;cursor:pointer;text-align:center;outline:#00bd44 solid 1px;outline-offset:-1px;background-color:#fff}._c-download ._downloadIcon img,._c-download ._geneSequenceIcon img,._c-download ._jbrowseIcon img,._c-geneSequence ._downloadIcon img,._c-geneSequence ._geneSequenceIcon img,._c-geneSequence ._jbrowseIcon img,._c-jbrowse ._downloadIcon img,._c-jbrowse ._geneSequenceIcon img,._c-jbrowse ._jbrowseIcon img{position:absolute;top:0;left:0;width:94px;height:auto}._c-download ._downloadIcon ._downloadName,._c-download ._downloadIcon ._geneSequenceName,._c-download ._downloadIcon ._jbrowseName,._c-download ._geneSequenceIcon ._downloadName,._c-download ._geneSequenceIcon ._geneSequenceName,._c-download ._geneSequenceIcon ._jbrowseName,._c-download ._jbrowseIcon ._downloadName,._c-download ._jbrowseIcon ._geneSequenceName,._c-download ._jbrowseIcon ._jbrowseName,._c-geneSequence ._downloadIcon ._downloadName,._c-geneSequence ._downloadIcon ._geneSequenceName,._c-geneSequence ._downloadIcon ._jbrowseName,._c-geneSequence ._geneSequenceIcon ._downloadName,._c-geneSequence ._geneSequenceIcon ._geneSequenceName,._c-geneSequence ._geneSequenceIcon ._jbrowseName,._c-geneSequence ._jbrowseIcon ._downloadName,._c-geneSequence ._jbrowseIcon ._geneSequenceName,._c-geneSequence ._jbrowseIcon ._jbrowseName,._c-jbrowse ._downloadIcon ._downloadName,._c-jbrowse ._downloadIcon ._geneSequenceName,._c-jbrowse ._downloadIcon ._jbrowseName,._c-jbrowse ._geneSequenceIcon ._downloadName,._c-jbrowse ._geneSequenceIcon ._geneSequenceName,._c-jbrowse ._geneSequenceIcon ._jbrowseName,._c-jbrowse ._jbrowseIcon ._downloadName,._c-jbrowse ._jbrowseIcon ._geneSequenceName,._c-jbrowse ._jbrowseIcon ._jbrowseName{width:94px;margin-top:60px}._c-download ._downloadIcon ._downloadName p,._c-download ._downloadIcon ._geneSequenceName p,._c-download ._downloadIcon ._jbrowseName p,._c-download ._geneSequenceIcon ._downloadName p,._c-download ._geneSequenceIcon ._geneSequenceName p,._c-download ._geneSequenceIcon ._jbrowseName p,._c-download ._jbrowseIcon ._downloadName p,._c-download ._jbrowseIcon ._geneSequenceName p,._c-download ._jbrowseIcon ._jbrowseName p,._c-geneSequence ._downloadIcon ._downloadName p,._c-geneSequence ._downloadIcon ._geneSequenceName p,._c-geneSequence ._downloadIcon ._jbrowseName p,._c-geneSequence ._geneSequenceIcon ._downloadName p,._c-geneSequence ._geneSequenceIcon ._geneSequenceName p,._c-geneSequence ._geneSequenceIcon ._jbrowseName p,._c-geneSequence ._jbrowseIcon ._downloadName p,._c-geneSequence ._jbrowseIcon ._geneSequenceName p,._c-geneSequence ._jbrowseIcon ._jbrowseName p,._c-jbrowse ._downloadIcon ._downloadName p,._c-jbrowse ._downloadIcon ._geneSequenceName p,._c-jbrowse ._downloadIcon ._jbrowseName p,._c-jbrowse ._geneSequenceIcon ._downloadName p,._c-jbrowse ._geneSequenceIcon ._geneSequenceName p,._c-jbrowse ._geneSequenceIcon ._jbrowseName p,._c-jbrowse ._jbrowseIcon ._downloadName p,._c-jbrowse ._jbrowseIcon ._geneSequenceName p,._c-jbrowse ._jbrowseIcon ._jbrowseName p{font-family:'Avenir Next',Verdana,sans-serif;font-size:11px;color:#00bd44}._c-download ._over,._c-geneSequence ._over,._c-jbrowse ._over{background-color:#00bd44}._c-download ._over ._downloadName p,._c-download ._over ._geneSequenceName p,._c-download ._over ._jbrowseName p,._c-geneSequence ._over ._downloadName p,._c-geneSequence ._over ._geneSequenceName p,._c-geneSequence ._over ._jbrowseName p,._c-jbrowse ._over ._downloadName p,._c-jbrowse ._over ._geneSequenceName p,._c-jbrowse ._over ._jbrowseName p{color:#fff}._c-cover{position:fixed;top:0;left:0;width:100vw;height:100vh;opacity:.5;background-color:#000}._u-none{display:none}._u-text_hide{text-decoration:none;text-indent:-9999px}._u-min{width:0;height:0}._u-clearfix{clear:both}._u-area{position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer}._u-tableCell{line-height:1.5rem;display:table-cell;width:inherit;height:inherit;text-align:center;vertical-align:middle}._u-secretMargin{position:relative;height:0}
+
+footer ._contact{
+  font-size:11px;margin-top:8px;margin-bottom:30px;letter-spacing:.06rem;color:#6c6c6c;
+  display:block;
+  padding-bottom: 15px;
+  margin:0 auto;
+  width: 480px;
+}
+footer ._contact ._spacer{
+  display:block;
+  margin-top: 1rem;
+}
+footer ._contact a:active,footer ._contact a:hover,footer ._contact a:link,footer ._contact a:visited{color:#6c6c6c}
+footer ._copyright{font-family:'Avenir Next',Verdana,sans-serif;font-size:11px;padding-top:13px;padding-bottom:13px;letter-spacing:.06rem;color:#6c6c6c;border-top:solid 1px #e9e9e8}
+/* 学名和名の五十音表パネルで、利用できないボタンをわかるようにする */
+#k_contents ._initials ._syllabary ._off,#k_contents ._search ._syllabary ._off,#k_contents ._select ._syllabary ._off {
+  cursor: default;
+  opacity: .5;
+  color: #00bd44;
+  background-color: #ccc;
+}
+#k_contents ._initials ._syllabary ._off:hover,#k_contents ._search ._syllabary ._off:hover,#k_contents ._select ._syllabary ._off:hover {
+  cursor: default;
+  opacity: .5;
+  color: #00bd44;
+  background-color: #ccc;
+}
+#k_contents ._initials ._alphabet ._off,#k_contents ._search ._alphabet ._off,#k_contents ._select ._alphabet ._off {
+  cursor: default;
+  opacity: .5;
+  color: #00bd44;
+  background-color: #ccc;
+}
+#k_contents ._initials ._alphabet ._off:hover,#k_contents ._search ._alphabet ._off:hover,#k_contents ._select ._alphabet ._off:hover {
+  cursor: default;
+  opacity: .5;
+  color: #00bd44;
+  background-color: #ccc;
+}
+._pges_submit{
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 14px;
+  display: block;
+  float: left;
+  /*    width: 152px; */
+  height: 40px;
+  margin-top: 4px;
+  margin-left: 2px;
+  letter-spacing: .03rem;
+  color: #fff;
+  background-color: #b4b4b4;
+  border: solid 1.25px;
+}
+._pges_submit button{
+  font-family: inherit;
+  font-weight: inherit;
+  font-size:14px;
+  color: #fff;
+  margin: 5px 30px 5px 12px;
+}
+._pges_submit:hover{
+  background-color: #00bd44;
+}
+/* ゲノム配列を切り出す用セレクタ */
+#k_contents .k_selectorContainer{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  /* 426px+枠線 */
+  width:428px;
+}
+#k_contents .k_selectorContainer span{
+  display:contents;
+}
+#k_contents .k_selectorContainer i{
+  margin-left:-18px;
+  margin-right:16px;
+  color: #bdbdbd;
+}
+#k_contents .k_selectorContainer select{
+  -webkit-appearance:none;
+  -moz-appearance: none;
+  appearance:none;
+  width:12rem;
+  padding:0.5rem;
+  box-sizing:border-box;
+  border:#ddd 1px solid;
+  border-radius:0.5rem;
+  background:#FFF;
+  color:#bbb;
+  margin-top:1px;
+  box-shadow:1px 1px 2px rgba(0,0,0,.1)
+}
+
+/* ダウンロードポップアップを全ページで有効化 */
+#k_contents ._downloadModal {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#k_contents ._downloadModal ._container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 560px;
+  margin-top: -135px;
+  margin-left: -280px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1777);
+}
+#k_contents ._downloadModal ._container ._text,
+#k_contents ._downloadModal ._container ._notes {
+  letter-spacing: .06rem;
+  color: #00bd44;
+}
+#k_contents ._downloadModal ._container ._text {
+  font-size: 15px;
+}
+#k_contents ._downloadModal ._container ._notes {
+  font-size: 13px;
+  margin-top: 5px;
+}
+#k_contents ._downloadModal ._container ._button {
+  margin-top: 30px;
+  text-align: center;
+}
+#k_contents ._downloadModal ._container ._button ._reset,
+#k_contents ._downloadModal ._container ._button ._submit {
+  font-size: 14px;
+  display: inline-block;
+  width: 152px;
+  height: 40px;
+  cursor: pointer;
+  letter-spacing: .03rem;
+}
+#k_contents ._downloadModal ._container ._button ._submit {
+  margin-left: 5px;
+  color: #00bd44;
+  border: solid #00bd44 1px;
+  background-color: #fff;
+}
+#k_contents ._downloadModal ._container ._button ._reset {
+  margin-right: 5px;
+  color: #6c6c6c;
+  border: solid #aaa 1px;
+  background-color: #fff;
+}
+#k_contents ._downloadModal ._container ._button ._reset:hover,#k_pc_02_01_A #k_contents ._downloadModal ._container ._button ._submit:hover {
+  color: #fff;
+  border: solid #00bd44 1px;
+  background-color: #00bd44;
+}
+#k_contents ._downloadModal ._container ._button ._off,
+#k_contents ._downloadModal ._container ._button ._off:hover {
+  cursor: default;
+  color: #fff;
+  border: solid #b4b4b4 1px;
+  background-color: #b4b4b4;
+}
+/* 縦回転 */
+#k_contents .k_vertical{
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  -ms-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  color: #264D73;
+  font-size: 2.5rem;
+}
+h2, h3 {
+  color: #444;
+  font-weight: lighter;
+}
+h3 {
+  font-size: 1.3rem;
+}
+body {
+  padding: .5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+@media (min-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+}
+body, input[text] {
+  color: #333;
+  font-family: Cambria, Georgia, serif;
+}
+a {
+  cursor: pointer;
+}
+button {
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  color: white;
+  background-color:  #42545C;
+}
+nav a.active {
+  background-color: black;
+  color: white;
+}
+hr {
+  margin: 1.5rem 0;
+}
+input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .5rem;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
